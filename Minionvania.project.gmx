@@ -5,9 +5,31 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprites name="Menu">
+      <sprite>sprites\spr_menu_arrow</sprite>
+      <sprite>sprites\spr_minionvania</sprite>
+    </sprites>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <scripts name="Menu">
+      <script>scripts\scr_menu_create.gml</script>
+      <script>scripts\scr_menu_step.gml</script>
+      <script>scripts\scr_menu_draw.gml</script>
+    </scripts>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_04b03</font>
+  </fonts>
+  <objects name="objects">
+    <object>objects\obj_menu</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_menu</room>
+    <room>rooms\rm_level_1</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
