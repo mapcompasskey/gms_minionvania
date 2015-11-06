@@ -8,9 +8,9 @@ if (onMove != 0)
     menuPosition += onMove;
     if (menuPosition < 0)
     {
-        menuPosition = array_length_1d(menuOptions) - 1;
+        menuPosition = array_height_2d(menuOptions) - 1;
     }
-    if (menuPosition > array_length_1d(menuOptions) - 1)
+    else if (menuPosition > array_height_2d(menuOptions) - 1)
     {
         menuPosition = 0;
     }
@@ -21,21 +21,15 @@ var onSelect;
 onSelect = max(keyboard_check_released(vk_enter), keyboard_check_released(vk_shift), keyboard_check_released(vk_space), 0);
 if (onSelect == 1)
 {
-    switch (menuPosition)
+    switch (menuOptions[menuPosition, 0])
     {
-        // Start
-        case 0:
-        {
+        case "Start":
             room_goto_next();
             break;
-        }
         
-        // Quit
-        case 1:
-        {
+        case "Quit":
             game_end();
             break;
-        }
     }
 }
 

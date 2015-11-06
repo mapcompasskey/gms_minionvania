@@ -24,7 +24,9 @@
     <font>fonts\fnt_04b03</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_menu</object>
+    <objects name="Controllers">
+      <object>objects\cont_menu</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
