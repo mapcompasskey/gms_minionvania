@@ -1,6 +1,6 @@
 // Logo Options
 logoX = room_width / 2;
-logoY = 40;
+logoY = 100;
 
 // Menu Options
 /*
@@ -16,13 +16,13 @@ var i = 0;
 menuOptions[i, 0] = "Start";
 menuOptions[i, 1] = "right";
 menuOptions[i, 2] = "bottom";
-menuOptions[i, 3] = -20;
-menuOptions[i, 4] = -40;
+menuOptions[i, 3] = -100;
+menuOptions[i, 4] = -140;
 
 var i = 1;
 menuOptions[i, 0] = "Quit";
 menuOptions[i, 1] = "right";
 menuOptions[i, 2] = "bottom";
-menuOptions[i, 3] = -20;
-menuOptions[i, 4] = -20;
+menuOptions[i, 3] = -100;
+menuOptions[i, 4] = -100;
 

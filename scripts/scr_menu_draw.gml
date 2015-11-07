@@ -1,5 +1,5 @@
 // Draw Logo
-draw_sprite(spr_minionvania, 0, logoX, logoY);
+draw_sprite_ext(spr_minionvania, 0, logoX, logoY, 3, 3, 0, c_white, 1);
 
 // Draw Menu Options
 draw_set_halign(fa_left);
@@ -61,7 +61,8 @@ for (i = 0; i < array_height_2d(menuOptions); i++)
     // draw menu arrow
     if (i == menuPosition)
     {
-        draw_sprite(spr_menu_arrow, 0, xPos - 10, yPos);
+        //draw_sprite(spr_menu_arrow, 0, xPos - 30, yPos);
+        draw_sprite_ext(spr_menu_arrow, 0, xPos - 30, yPos, 3, 3, 0, c_white, 1);
     }
 }
 

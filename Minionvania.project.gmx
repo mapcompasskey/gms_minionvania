@@ -10,6 +10,9 @@
       <sprite>sprites\spr_menu_arrow</sprite>
       <sprite>sprites\spr_minionvania</sprite>
     </sprites>
+    <sprites name="Objects">
+      <sprite>sprites\spr_wall</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -35,7 +38,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_04b03_menu</font>
-    <font>fonts\fnt_04b03</font>
+    <font>fonts\fnt_04b03_gui</font>
   </fonts>
   <objects name="objects">
     <objects name="Controllers">

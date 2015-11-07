@@ -1,21 +1,2 @@
 Minionvania Prototype
 GameMaker Studio 1.4
-
-Pixel Perfect Scaling:
- Upscale the game from 300x200 to 900x600.
-
- Resources > Change Global Game Settings > Windows > Graphics
- Uncheck the "Interpolate colors between pixels" option.
-
- Room > Settings
-  Width: 300
-  Height: 200
-  Speed : 60
-
- Room > Views
-  Enable the use of Views
-  Clear Background with Window Colour
-  View 0
-  Visible when room starts
-  View in room: (0, 0), 300 x 200
-  Port on Screen: (0, 0), 900 x 300
