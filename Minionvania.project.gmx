@@ -13,6 +13,9 @@
     <sprites name="Objects">
       <sprite>sprites\spr_wall</sprite>
     </sprites>
+    <sprites name="Entities">
+      <sprite>sprites\spr_player</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -35,6 +38,11 @@
         <script>scripts\scr_pause_screen_draw.gml</script>
       </scripts>
     </scripts>
+    <scripts name="Entities">
+      <script>scripts\scr_player_create.gml</script>
+      <script>scripts\scr_player_step.gml</script>
+      <script>scripts\scr_player_end_step.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_04b03_menu</font>
@@ -45,6 +53,12 @@
       <object>objects\cont_menu</object>
       <object>objects\cont_pause_screen</object>
       <object>objects\cont_level</object>
+    </objects>
+    <objects name="Objects">
+      <object>objects\obj_wall</object>
+    </objects>
+    <objects name="Entities">
+      <object>objects\obj_player</object>
     </objects>
   </objects>
   <rooms name="rooms">
