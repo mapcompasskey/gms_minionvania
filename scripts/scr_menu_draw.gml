@@ -4,7 +4,7 @@ draw_sprite(spr_minionvania, 0, logoX, logoY);
 // Draw Menu Options
 draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
-draw_set_font(fnt_04b03);
+draw_set_font(fnt_04b03_menu);
 draw_set_color(c_white);
 
 var i, text, xAlign, yAlign, xOffset, yOffset, strWidth, xPos, yPos;

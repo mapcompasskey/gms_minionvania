@@ -14,18 +14,34 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <scripts name="Menu">
-      <script>scripts\scr_menu_create.gml</script>
-      <script>scripts\scr_menu_step.gml</script>
-      <script>scripts\scr_menu_draw.gml</script>
+    <scripts name="Controllers">
+      <scripts name="Menu">
+        <script>scripts\scr_menu_create.gml</script>
+        <script>scripts\scr_menu_step.gml</script>
+        <script>scripts\scr_menu_draw.gml</script>
+      </scripts>
+      <scripts name="Level">
+        <script>scripts\scr_level_create.gml</script>
+        <script>scripts\scr_level_step.gml</script>
+        <script>scripts\scr_level_draw_gui.gml</script>
+      </scripts>
+      <scripts name="PauseScreen">
+        <script>scripts\scr_pause_screen_create.gml</script>
+        <script>scripts\scr_pause_screen_step.gml</script>
+        <script>scripts\scr_pause_screen_draw_gui.gml</script>
+        <script>scripts\scr_pause_screen_draw.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <fonts name="fonts">
+    <font>fonts\fnt_04b03_menu</font>
     <font>fonts\fnt_04b03</font>
   </fonts>
   <objects name="objects">
     <objects name="Controllers">
       <object>objects\cont_menu</object>
+      <object>objects\cont_pause_screen</object>
+      <object>objects\cont_level</object>
     </objects>
   </objects>
   <rooms name="rooms">

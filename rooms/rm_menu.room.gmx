@@ -10,7 +10,7 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>// Add the Menu object
+  <code>// add the menu controller
 instance_create(0, 0, cont_menu);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
