@@ -1,4 +1,4 @@
-// set global variables here
+// set global room variables here
 // ...
 
 // scale up the GUI to match the view

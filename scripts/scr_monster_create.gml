@@ -22,7 +22,6 @@ key_right = false;
 
 // choose a random number between 0 - 3
 rnd = irandom(3);
-show_debug_message(rnd);
 switch (rnd)
 {
     case 0:

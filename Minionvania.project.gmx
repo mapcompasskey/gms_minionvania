@@ -12,6 +12,7 @@
     </sprites>
     <sprites name="Objects">
       <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_hero_trigger</sprite>
     </sprites>
     <sprites name="Entities">
       <sprite>sprites\spr_player</sprite>
@@ -56,6 +57,13 @@
       </scripts>
       <script>scripts\scr_entity_reposition.gml</script>
     </scripts>
+    <scripts name="Objects">
+      <scripts name="HeroTrigger">
+        <script>scripts\scr_hero_trigger_step.gml</script>
+        <script>scripts\scr_hero_trigger_create.gml</script>
+      </scripts>
+    </scripts>
+    <script>scripts\scr_game_initialize.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_04b03_menu</font>
@@ -69,6 +77,7 @@
     </objects>
     <objects name="Objects">
       <object>objects\obj_wall</object>
+      <object>objects\obj_hero_trigger</object>
     </objects>
     <objects name="Entities">
       <object>objects\obj_player</object>
@@ -77,8 +86,9 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_menu</room>
+    <room>rooms\rm_initialize</room>
     <room>rooms\rm_level_1</room>
+    <room>rooms\rm_menu</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
