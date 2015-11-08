@@ -15,6 +15,7 @@
     </sprites>
     <sprites name="Entities">
       <sprite>sprites\spr_player</sprite>
+      <sprite>sprites\spr_monster</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -39,9 +40,15 @@
       </scripts>
     </scripts>
     <scripts name="Entities">
-      <script>scripts\scr_player_create.gml</script>
-      <script>scripts\scr_player_step.gml</script>
-      <script>scripts\scr_player_end_step.gml</script>
+      <scripts name="Player">
+        <script>scripts\scr_player_end_step.gml</script>
+        <script>scripts\scr_player_step.gml</script>
+        <script>scripts\scr_player_create.gml</script>
+      </scripts>
+      <scripts name="Monster">
+        <script>scripts\scr_monster_create.gml</script>
+        <script>scripts\scr_monster_step.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -59,6 +66,7 @@
     </objects>
     <objects name="Entities">
       <object>objects\obj_player</object>
+      <object>objects\obj_monster</object>
     </objects>
   </objects>
   <rooms name="rooms">

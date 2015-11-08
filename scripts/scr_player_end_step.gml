@@ -1,4 +1,6 @@
-// scr_player_begin_end_step()
+/**
+ * End of Update
+ */
 
 /**
  * Is Colliding with Sloped Walls

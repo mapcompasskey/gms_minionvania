@@ -1,6 +1,7 @@
-// scr_player_create()
+/**
+ * Initialize Variables
+ */
 
-// Initialize Variables
 grav = 0.5;
 hsp = 0;
 vsp = 0;
@@ -16,7 +17,8 @@ falling = false;
 crouching = false;
 hurting = false;
 dying = false;
-facing_right = true;
 
 grounded = false;
 grounded_on_platform = false;
+facing_right = true;
+

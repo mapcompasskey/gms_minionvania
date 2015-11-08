@@ -1,5 +1,3 @@
-// scr_player_step()
-
 /**
  * Update
  */
