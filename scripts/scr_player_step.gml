@@ -6,7 +6,6 @@
 key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
 key_down = keyboard_check(vk_down);
-key_jump = keyboard_check(vk_space);
 key_jump_pressed = keyboard_check_pressed(vk_space);
 key_jump_released = keyboard_check_released(vk_space);
 
@@ -67,18 +66,6 @@ if ( ! hurting && ! dying && ! crouching)
         jumps++;
         vsp = -jumpspeed;
     }
-    
-    /*
-    if (key_jump)
-    {
-        vsp = -jumpspeed;
-    }
-    
-    if (vsp < 0 && ! key_jump_held)
-    {
-        vsp = max(vsp, 0);
-    }
-    */
     
     // if grounded and just pressed the JUMP button
     if (grounded && ! jumping && key_jump_pressed)

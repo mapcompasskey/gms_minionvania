@@ -19,6 +19,7 @@
       <sprite>sprites\spr_monster</sprite>
       <sprite>sprites\spr_hero</sprite>
     </sprites>
+    <sprite>sprites\spr_yellow_dot</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -43,9 +44,9 @@
     </scripts>
     <scripts name="Entities">
       <scripts name="Player">
-        <script>scripts\scr_player_end_step.gml</script>
-        <script>scripts\scr_player_step.gml</script>
         <script>scripts\scr_player_create.gml</script>
+        <script>scripts\scr_player_step.gml</script>
+        <script>scripts\scr_player_end_step.gml</script>
       </scripts>
       <scripts name="Monster">
         <script>scripts\scr_monster_create.gml</script>
@@ -54,13 +55,15 @@
       <scripts name="Hero">
         <script>scripts\scr_hero_create.gml</script>
         <script>scripts\scr_hero_step.gml</script>
+        <script>scripts\scr_hero_draw.gml</script>
+        <script>scripts\scr_hero_trigger_jump.gml</script>
       </scripts>
       <script>scripts\scr_entity_reposition.gml</script>
     </scripts>
     <scripts name="Objects">
       <scripts name="HeroTrigger">
-        <script>scripts\scr_hero_trigger_step.gml</script>
         <script>scripts\scr_hero_trigger_create.gml</script>
+        <script>scripts\scr_hero_trigger_step.gml</script>
       </scripts>
     </scripts>
     <script>scripts\scr_game_initialize.gml</script>
@@ -87,6 +90,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>
+    <room>rooms\rm_level_2</room>
     <room>rooms\rm_level_1</room>
     <room>rooms\rm_menu</room>
   </rooms>
