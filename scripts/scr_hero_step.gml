@@ -17,12 +17,6 @@ if (vsp < max_vsp)
 
 
 /**
- * Is Triggered to Jump
- */
-//scr_hero_trigger_jump();
-
-
-/**
  * Is Jumping or Falling
  */
 if ( ! dying && ! hurting)

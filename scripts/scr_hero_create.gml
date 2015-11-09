@@ -39,11 +39,3 @@ switch (rnd)
         break;
 }
 
-// trigger variables
-isTriggered = false;
-xJumpOrigin = 0;
-yJumpOrigin = 0;
-xJumpDestination = 0;
-yJumpDestination = 0;
-
-

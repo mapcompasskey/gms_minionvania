@@ -1,3 +1,7 @@
+/**
+ * Draw GUI
+ */
+
 // draw text to GUI
 draw_set_color(c_white);
 draw_set_halign(fa_left);

@@ -1,51 +1,15 @@
-if (1 == 0)
-{
-    if (xTileOffset != 0 || yTileOffset != 0)
-    {
-        // if the colliding with the Hero object
-        hero = instance_place(x, y, obj_hero);
-        if (hero)
-        {
-            // if not already colliding with the Hero
-            if (hero != heroTouching)
-            {
-                heroTouching = hero;
-                
-                xDestination = bbox_left + sprite_width / 2;
-                yDestination = bbox_top;
-                
-                xDestination += xTileOffset * global.tileSize;
-                yDestination += yTileOffset * global.tileSize;
-                
-                hero.isTriggered = true;
-                hero.xJumpDestination = xDestination;
-                hero.yJumpDestination = yDestination;
-                
-                /*
-                xDestination += hero.sprite_xoffset;
-                yDestination += hero.sprite_yoffset - hero.sprite_height;
-                
-                hero.x = xDestination;
-                hero.y = yDestination;
-                */
-            }
-        }
-        else
-        {
-            heroTouching = -1;
-        }
-    }
-}
-
+/**
+ * On Update
+ */
 
 // if colliding with the Hero object
 hero = instance_place(x, y, obj_hero);
 if (hero)
 {
     // if not already colliding with the Hero
-    if (hero != heroTouching)
+    if (hero != hero_touching)
     {
-        heroTouching = hero;
+        hero_touching = hero;
         
         // if trigger only affects left moving objects
         if (if_moving_left)
@@ -93,6 +57,6 @@ if (hero)
 }
 else
 {
-    heroTouching = -1;
+    hero_touching = -1;
 }
 

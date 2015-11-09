@@ -1,3 +1,7 @@
+/**
+ * Initialize Variables
+ */
+
 // set global room variables here
 // ...
 

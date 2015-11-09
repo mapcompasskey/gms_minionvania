@@ -1,6 +1,8 @@
 /**
  * Set Global Variables
+ *
+ * Loaded in the creation code of "rm_initialize" when game begins.
  */
 
-global.tileSize = 32;
+//global.tile_size = 32;
 

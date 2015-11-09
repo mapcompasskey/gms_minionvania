@@ -1,3 +1,7 @@
+/**
+ * On Update
+ */
+
 // if ESC key is pressed
 if (keyboard_check_pressed(vk_escape))
 {

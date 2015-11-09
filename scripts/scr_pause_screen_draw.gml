@@ -1,7 +1,11 @@
+/**
+ * Draw
+ */
+
 // draw the background
-if (surface_exists(pauseSurface))
+if (surface_exists(pause_surface))
 {
-    draw_surface(pauseSurface, view_xview[0], view_yview[0]);
+    draw_surface(pause_surface, view_xview[0], view_yview[0]);
 }
 
 // darken the background by drawing a faded black rectangle over it

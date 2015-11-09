@@ -1,10 +1,14 @@
+/**
+ * On Update
+ */
+
 // if ESC key is pressed
 if (keyboard_check_pressed(vk_escape))
 {
     // destory the surface, freeing it from memory
-    if (surface_exists(pauseSurface))
+    if (surface_exists(pause_surface))
     {
-        surface_free(pauseSurface);
+        surface_free(pause_surface);
     }
     
     // activate everything

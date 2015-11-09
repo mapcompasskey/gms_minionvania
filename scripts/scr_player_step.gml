@@ -1,5 +1,5 @@
 /**
- * Update
+ * On Update
  */
 
 // get the player's input

@@ -1,8 +1,12 @@
-// Logo Options
-logoX = room_width / 2;
-logoY = 100;
+/**
+ * Initialize Variables
+ */
 
-// Menu Options
+// logo options
+logo_x = room_width / 2;
+logo_y = 100;
+
+// menu options
 /*
     [i, 0] = Name
     [i, 1] = Align Horizontally [left|center|right]
@@ -10,19 +14,19 @@ logoY = 100;
     [i, 3] = X Offset
     [i, 4] = Y Offset
 */
-menuPosition = 0;
+menu_position = 0;
 
 var i = 0;
-menuOptions[i, 0] = "Start";
-menuOptions[i, 1] = "right";
-menuOptions[i, 2] = "bottom";
-menuOptions[i, 3] = -100;
-menuOptions[i, 4] = -140;
+menu_options[i, 0] = "Start";
+menu_options[i, 1] = "right";
+menu_options[i, 2] = "bottom";
+menu_options[i, 3] = -100;
+menu_options[i, 4] = -140;
 
 var i = 1;
-menuOptions[i, 0] = "Quit";
-menuOptions[i, 1] = "right";
-menuOptions[i, 2] = "bottom";
-menuOptions[i, 3] = -100;
-menuOptions[i, 4] = -100;
+menu_options[i, 0] = "Quit";
+menu_options[i, 1] = "right";
+menu_options[i, 2] = "bottom";
+menu_options[i, 3] = -100;
+menu_options[i, 4] = -100;
 

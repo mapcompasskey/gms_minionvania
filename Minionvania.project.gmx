@@ -19,7 +19,6 @@
       <sprite>sprites\spr_monster</sprite>
       <sprite>sprites\spr_hero</sprite>
     </sprites>
-    <sprite>sprites\spr_yellow_dot</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -55,8 +54,6 @@
       <scripts name="Hero">
         <script>scripts\scr_hero_create.gml</script>
         <script>scripts\scr_hero_step.gml</script>
-        <script>scripts\scr_hero_draw.gml</script>
-        <script>scripts\scr_hero_trigger_jump.gml</script>
       </scripts>
       <script>scripts\scr_entity_reposition.gml</script>
     </scripts>
@@ -90,6 +87,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>
+    <room>rooms\rm_level_3</room>
     <room>rooms\rm_level_2</room>
     <room>rooms\rm_level_1</room>
     <room>rooms\rm_menu</room>
