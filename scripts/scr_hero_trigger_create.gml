@@ -13,3 +13,7 @@ reset_movespeed = false;
 movespeed = 0;
 jumpspeed = 0;
 
+turn_around = false;
+
+ignore_count = 0;
+ignore_counter = 0;

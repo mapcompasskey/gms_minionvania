@@ -29,6 +29,17 @@ if (hero)
             }
         }
         
+        // if this trigger can be ignored
+        if (ignore_count)
+        {
+            ignore_counter++;
+            if (ignore_counter <= ignore_count)
+            {
+                exit;
+            }
+            ignore_counter = 0;
+        }
+        
         // reset the level
         if (reset_level)
         {
@@ -53,6 +64,14 @@ if (hero)
             hero.jumpspeed = jumpspeed;
             hero.key_jump_pressed = true;
         }
+        
+        // turn around
+        if (turn_around)
+        {
+            hero.key_left  = !hero.key_left;
+            hero.key_right = !hero.key_right;
+        }
+        
     }
 }
 hero_touching = hero;
