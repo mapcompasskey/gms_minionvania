@@ -19,6 +19,5 @@ hurting = false;
 dying = false;
 
 grounded = false;
-grounded_on_platform = false;
 facing_right = true;
 

@@ -12,19 +12,6 @@ key_jump_released = keyboard_check_released(vk_space);
 // is object standing on a wall
 grounded = place_meeting(x, y + 1, obj_wall);
 
-/*
-// if not inside a platform
-if ( ! place_meeting(x, y, obj_platform))
-{
-    // is object standing on a platform
-    grounded_on_platform = place_meeting(x, y + 1, obj_platform);
-    if (grounded_on_platform && ! grounded)
-    {
-        grounded = true;
-    }
-}
-*/
-
 // reset walking
 hsp = 0;
 walking = false;
