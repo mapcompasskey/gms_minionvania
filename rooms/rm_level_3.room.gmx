@@ -108,7 +108,7 @@ instance_create(0, 0, cont_level);</code>
     <instance objName="obj_wall" x="416" y="480" name="inst_C3C803AB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="448" y="480" name="inst_EE778AA7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="480" y="480" name="inst_1E5AEABE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_hero" x="480" y="704" name="inst_09CD4168" locked="0" code="key_left = false;&#xA;key_right = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hero" x="256" y="832" name="inst_09CD4168" locked="0" code="key_left = false;&#xA;key_right = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1152" y="672" name="inst_36FB05A4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="32" y="832" name="inst_8725387F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="32" y="800" name="inst_29EBDCA7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -206,10 +206,10 @@ instance_create(0, 0, cont_level);</code>
     <instance objName="obj_wall" x="256" y="256" name="inst_2069E035" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="288" y="256" name="inst_5313EE02" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="320" y="256" name="inst_DC0E6854" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_hero_trigger" x="320" y="864" name="inst_57E0D13D" locked="0" code="if_moving_right = true;&#xA;jumpspeed = 12;&#xA;" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hero_trigger" x="320" y="864" name="inst_57E0D13D" locked="0" code="if_moving_right = true;&#xA;movespeed = 2;&#xA;jumpspeed = 12;&#xA;" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hero_trigger" x="544" y="704" name="inst_BAEB3B30" locked="0" code="if_moving_right = true;&#xA;movespeed = 3;&#xA;jumpspeed = 12;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hero_trigger" x="672" y="576" name="inst_27C6D0EF" locked="0" code="if_moving_right = true;&#xA;reset_movespeed = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_hero_trigger" x="928" y="640" name="inst_274DB4CC" locked="0" code="if_moving_left = true;&#xA;jumpspeed = 8;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hero_trigger" x="928" y="640" name="inst_274DB4CC" locked="0" code="if_moving_left = true;&#xA;movespeed = 2;&#xA;jumpspeed = 8;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="384" y="480" name="inst_DE7EEAD5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="352" y="480" name="inst_55686D44" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="320" y="480" name="inst_BEC14B07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -255,7 +255,7 @@ instance_create(0, 0, cont_level);</code>
     <instance objName="obj_wall" x="544" y="224" name="inst_923CB26F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="512" y="224" name="inst_D2ED0E4B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hero_trigger" x="672" y="352" name="inst_8C45D6AB" locked="0" code="if_moving_right = true;&#xA;reset_movespeed = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_hero_trigger" x="1056" y="416" name="inst_B1CBC907" locked="0" code="if_moving_right = true;&#xA;jumpspeed = 12;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hero_trigger" x="1056" y="416" name="inst_B1CBC907" locked="0" code="if_moving_right = true;&#xA;movespeed = 2;&#xA;jumpspeed = 12;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hero_trigger" x="1088" y="256" name="inst_7C369E44" locked="0" code="if_moving_left = true;&#xA;movespeed = 4;&#xA;jumpspeed = 12;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hero_trigger" x="928" y="192" name="inst_4955880C" locked="0" code="if_moving_left = true;&#xA;reset_movespeed = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="416" y="256" name="inst_1AFC80D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -264,7 +264,7 @@ instance_create(0, 0, cont_level);</code>
     <instance objName="obj_hero_trigger" x="480" y="192" name="inst_1DC05E62" locked="0" code="if_moving_left = true;&#xA;movespeed = 3;&#xA;jumpspeed = 4;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hero_trigger" x="384" y="224" name="inst_5325A5CF" locked="0" code="if_moving_left = true;&#xA;reset_movespeed = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_monster" x="352" y="448" name="inst_EA3538A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_monster" x="800" y="576" name="inst_00A0B4A0" locked="0" code="damage = 50;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_monster" x="800" y="576" name="inst_00A0B4A0" locked="0" code="damage = 10;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_monster" x="768" y="352" name="inst_6FAAB5EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="1024" y="416" name="inst_1A6520FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_monster" x="800" y="832" name="inst_B79BCFBA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
