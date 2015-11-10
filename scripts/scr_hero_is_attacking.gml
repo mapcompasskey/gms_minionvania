@@ -13,6 +13,13 @@ if ( ! dying && ! hurting && ! idling)
         {
             current_hp = hp;
             
+            // amount of damage to take
+            damage_taken = 30;
+            if (is_real(monster.damage))
+            {
+                damage_taken = monster.damage;
+            }
+            
             attacking = true;
             monster.attacking = true;
             
@@ -27,8 +34,7 @@ if ( ! dying && ! hurting && ! idling)
     {
         attack_timer += delta_time;
         
-        // slowly substract up to 30 health
-        damage_taken = 30;
+        // slowly substract the damage
         timer_rate  = (100 * 1 / 1000000) * attack_timer;
         health_rate = (timer_rate * damage_taken / 100);
         if (health_rate > damage_taken)

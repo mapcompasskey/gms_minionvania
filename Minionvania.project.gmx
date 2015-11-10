@@ -13,6 +13,7 @@
     <sprites name="Objects">
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_hero_trigger</sprite>
+      <sprite>sprites\spr_health_pack</sprite>
     </sprites>
     <sprites name="Entities">
       <sprite>sprites\spr_player</sprite>
@@ -74,6 +75,10 @@
         <script>scripts\scr_hero_trigger_create.gml</script>
         <script>scripts\scr_hero_trigger_step.gml</script>
       </scripts>
+      <scripts name="HealthPack">
+        <script>scripts\spr_health_pack_create.gml</script>
+        <script>scripts\spr_health_pack_step.gml</script>
+      </scripts>
     </scripts>
     <script>scripts\scr_game_initialize.gml</script>
   </scripts>
@@ -90,6 +95,7 @@
     <objects name="Objects">
       <object>objects\obj_wall</object>
       <object>objects\obj_hero_trigger</object>
+      <object>objects\obj_health_pack</object>
     </objects>
     <objects name="Entities">
       <object>objects\obj_player</object>

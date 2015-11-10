@@ -55,8 +55,5 @@ if (hero)
         }
     }
 }
-else
-{
-    hero_touching = -1;
-}
+hero_touching = hero;
 

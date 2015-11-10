@@ -7,6 +7,7 @@ hsp = 0;
 vsp = 0;
 max_vsp = 10;
 movespeed = 1;
+damage = 30;
 
 walking = false;
 falling = false;
