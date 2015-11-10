@@ -19,9 +19,8 @@ if ( ! dying && ! hurting)
                 {
                     //attacking = true;
                     
-                    // go to the battle room
-                    global.previous_room = room;
-                    room_goto(rm_battle_1);
+                    // add the Battle Transition controller
+                    instance_create(0, 0, cont_battle_transition);
                 }
             }
         }

@@ -41,6 +41,10 @@
         <script>scripts\scr_pause_screen_draw_gui.gml</script>
         <script>scripts\scr_pause_screen_draw.gml</script>
       </scripts>
+      <scripts name="BattleTransition">
+        <script>scripts\scr_battle_transition_create.gml</script>
+        <script>scripts\scr_battle_transition_draw.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Entities">
       <scripts name="Player">
@@ -92,6 +96,7 @@
       <object>objects\cont_menu</object>
       <object>objects\cont_pause_screen</object>
       <object>objects\cont_level</object>
+      <object>objects\cont_battle_transition</object>
     </objects>
     <objects name="Objects">
       <object>objects\obj_wall</object>

@@ -6,9 +6,9 @@
 if (keyboard_check_pressed(vk_escape))
 {
     // destory the surface, freeing it from memory
-    if (surface_exists(pause_surface))
+    if (surface_exists(snapshot_surface))
     {
-        surface_free(pause_surface);
+        surface_free(snapshot_surface);
     }
     
     // activate everything

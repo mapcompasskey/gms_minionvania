@@ -2,10 +2,10 @@
  * Draw
  */
 
-// draw the background
-if (surface_exists(pause_surface))
+// draw the snapshot
+if (surface_exists(snapshot_surface))
 {
-    draw_surface(pause_surface, view_xview[0], view_yview[0]);
+    draw_surface(snapshot_surface, view_xview[0], view_yview[0]);
 }
 
 // darken the background by drawing a faded black rectangle over it
