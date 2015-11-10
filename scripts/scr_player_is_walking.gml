@@ -2,7 +2,7 @@
  * Is Moving
  */
 
-if ( ! dying && ! hurting && ! crouching)
+if ( ! dying && ! hurting && ! crouching && ! attacking)
 {    
     if (key_left)
     {

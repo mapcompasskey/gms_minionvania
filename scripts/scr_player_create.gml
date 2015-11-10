@@ -17,7 +17,9 @@ falling = false;
 crouching = false;
 hurting = false;
 dying = false;
+attacking = false;
 
+hero_touching = -1;
 grounded = false;
 facing_right = true;
 

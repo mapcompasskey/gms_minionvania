@@ -46,6 +46,7 @@
       <scripts name="Player">
         <script>scripts\scr_player_create.gml</script>
         <script>scripts\scr_player_step.gml</script>
+        <script>scripts\scr_player_is_attacking.gml</script>
         <script>scripts\scr_player_is_crouching.gml</script>
         <script>scripts\scr_player_is_jumping.gml</script>
         <script>scripts\scr_player_is_walking.gml</script>
@@ -106,6 +107,7 @@
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>
     <room>rooms\rm_level_3</room>
+    <room>rooms\rm_battle_1</room>
     <room>rooms\rm_level_2</room>
     <room>rooms\rm_level_1</room>
     <room>rooms\rm_menu</room>
