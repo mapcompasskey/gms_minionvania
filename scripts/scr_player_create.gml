@@ -21,3 +21,10 @@ dying = false;
 grounded = false;
 facing_right = true;
 
+// inputs
+key_left = false
+key_right = false;
+key_down = false;
+key_jump_pressed = false;
+key_jump_released = false;
+

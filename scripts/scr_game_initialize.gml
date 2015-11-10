@@ -6,3 +6,12 @@
 
 //global.tile_size = 32;
 
+/*
+// the different states to use when updating the player
+enum player_states
+{
+    normal,
+    jumping
+};
+*/
+

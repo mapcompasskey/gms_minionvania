@@ -17,26 +17,16 @@ if (vsp < max_vsp)
 
 
 /**
- * Is Moving
+ * Check Object State
  */
-if ( ! dying && ! hurting)
-{    
-    if (key_left)
-    {
-        hsp = -movespeed;
-        walking = true;
-    }
-    else if (key_right)
-    {
-        hsp = movespeed;
-        walking = true;
-    }
-}
+
+scr_hero_is_walking();
 
 
 /**
  * Check for the Edge of Platforms
  */
+
 scr_entity_check_platform_edges();
 
 // turn around if reached edge of platform
@@ -50,6 +40,7 @@ if (turn_around)
 /**
  * Check for Collisions
  */
+
 scr_entity_check_wall_collisions();
 
 // turn around if walked into a wall
@@ -63,12 +54,9 @@ if (turn_around)
 /**
  * Update Object Position
  */
+
 x += hsp;
 y += vsp;
 
-
-/**
- * Update Object Sprite
- */
 scr_entity_update_image_xscale();
 

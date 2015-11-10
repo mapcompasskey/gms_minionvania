@@ -24,87 +24,18 @@ if (vsp < max_vsp)
 
 
 /**
- * Is Crouching
+ * Check Object State
  */
-if ( ! hurting && ! dying && ! jumping && ! jumping)
-{
-    // if grounded and pressing the DOWN button
-    if (grounded && key_down)
-    {
-        crouching = true;
-    }
-    
-    // if crouching and no longer pressing the DOWN button
-    if (crouching && ! key_down)
-    {
-        crouching = false;
-    }
-}
 
-
-/**
- * Is Jumping or Falling
- */
-if ( ! hurting && ! dying && ! crouching)
-{
-    // if jumping again while in the air
-    if (jumping && jumps < jumpsmax && key_jump_pressed)
-    {
-        jumps++;
-        vsp = -jumpspeed;
-    }
-    
-    // if grounded and just pressed the JUMP button
-    if (grounded && ! jumping && key_jump_pressed)
-    {
-        jumping = true;
-        grounded = false;
-        vsp = -jumpspeed;
-    }
-    
-    // reduce jump height
-    if (jumping && vsp < 0 && key_jump_released)
-    {
-        vsp = vsp / 2;
-    }
-    
-    // if falling
-    if (vsp > 0 && ! grounded)
-    {
-        falling = true;
-    }
-    
-    // if grounded after jumping or falling
-    if ((jumping || falling) && grounded)
-    {
-        jumps = 0;
-        jumping = false;
-        falling = false;
-    }
-}
-
-
-/**
- * Is Moving
- */
-if ( ! dying && ! hurting && ! crouching)
-{    
-    if (key_left)
-    {
-        hsp = -movespeed;
-        walking = true;
-    }
-    else if (key_right)
-    {
-        hsp = movespeed;
-        walking = true;
-    }
-}
+scr_player_is_crouching();
+scr_player_is_jumping();
+scr_player_is_walking();
 
 
 /**
  * Update Object Sprite
  */
+
 scr_entity_update_image_xscale();
 
 // update the object's sprite
@@ -114,11 +45,6 @@ if (crouching)
     image_speed = 0;
     image_index = 1;
 }
-/*else if (walking)
-{
-    sprite_index = spr_player_walk;
-    image_speed = 0.3;
-}*/
 else
 {
     sprite_index = spr_player;

@@ -16,12 +16,12 @@ dying = false;
 grounded = false;
 facing_right = true;
 
-// choose starting direction
+// faux object inputs
 key_left = false;
 key_right = false;
 
-// choose a random number between 0 - 3
-rnd = irandom(3);
+// choose a random starting direction
+rnd = irandom(3); // 0 - 3
 switch (rnd)
 {
     case 0:

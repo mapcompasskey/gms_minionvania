@@ -17,55 +17,17 @@ if (vsp < max_vsp)
 
 
 /**
- * Is Jumping or Falling
+ * Check Object State
  */
-if ( ! dying && ! hurting)
-{
-    // if grounded and just pressed the JUMP button
-    if (grounded && ! jumping && key_jump_pressed)
-    {
-        key_jump_pressed = false;
-        jumping = true;
-        grounded = false;
-        vsp = -jumpspeed;
-    }
-    
-    // if falling
-    if (vsp > 0 && ! grounded)
-    {
-        falling = true;
-    }
-    
-    // if grounded after jumping or falling
-    if ((jumping || falling) && grounded)
-    {
-        jumping = false;
-        falling = false;
-    }
-}
 
-
-/**
- * Is Moving
- */
-if ( ! dying && ! hurting)
-{    
-    if (key_left)
-    {
-        hsp = -movespeed;
-        walking = true;
-    }
-    else if (key_right)
-    {
-        hsp = movespeed;
-        walking = true;
-    }
-}
+scr_hero_is_jumping();
+scr_hero_is_walking();
 
 
 /**
  * Check for the Edge of Platforms
  * /
+
 scr_entity_check_platform_edges();
 
 // turn around if reached edge of platform
@@ -80,6 +42,7 @@ if (turn_around)
 /**
  * Check for Collisions
  */
+
 scr_entity_check_wall_collisions();
 
 // turn around if walked into a wall
@@ -93,18 +56,15 @@ if (turn_around)
 /**
  * Update Object Position
  */
+
 x += hsp;
 y += vsp;
+scr_entity_reposition();
 
 
 /**
  * Update Object Sprite
  */
+
 scr_entity_update_image_xscale();
-
-
-/**
- * Is Outside the Room
- */
-scr_entity_reposition();
 
