@@ -20,6 +20,8 @@ if (vsp < max_vsp)
  * Check Object State
  */
 
+scr_hero_is_idling();
+scr_hero_is_attacking();
 scr_hero_is_jumping();
 scr_hero_is_walking();
 

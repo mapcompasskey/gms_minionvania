@@ -2,6 +2,7 @@
  * Initialize Variables
  */
 
+hp = 100;
 grav = 0.5;
 hsp = 0;
 vsp = 0;
@@ -15,9 +16,18 @@ jumping = false;
 falling = false;
 hurting = false;
 dying = false;
+attacking = false;
+idling = false;
 
 grounded = false;
 facing_right = true;
+monster_touching = -1;
+
+attack_time = 1;
+attack_timer = 0;
+
+idle_time = 0;
+idle_timer = 0;
 
 // faux object inputs
 key_left = false;

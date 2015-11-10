@@ -20,7 +20,7 @@ if (vsp < max_vsp)
  * Check Object State
  */
 
-scr_hero_is_walking();
+scr_monster_is_walking();
 
 
 /**

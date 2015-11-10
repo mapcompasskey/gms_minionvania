@@ -12,6 +12,7 @@ walking = false;
 falling = false;
 hurting = false;
 dying = false;
+attacking = false;
 
 grounded = false;
 facing_right = true;

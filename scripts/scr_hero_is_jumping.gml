@@ -2,7 +2,7 @@
  * Is Jumping or Falling
  */
 
-if ( ! dying && ! hurting)
+if ( ! dying && ! hurting && ! attacking && ! idling)
 {
     // if grounded and just pressed the JUMP button
     if (grounded && ! jumping && key_jump_pressed)
