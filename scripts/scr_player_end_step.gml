@@ -73,30 +73,17 @@ if (place_meeting(x, y + vsp, obj_platform) && sign(vsp) == 1)
 }
 */
 
+
 /**
  * Is Colliding with Walls
  */
+scr_entity_check_wall_collisions();
 
-// check horizontal collision
-if (place_meeting(x + hsp, y, obj_wall))
-{
-    while ( ! place_meeting(x + sign(hsp), y, obj_wall))
-    {
-        x += sign(hsp);
-    }
-    hsp = 0;
-}
+
+/**
+ * Update Object Position
+ */
 x += hsp;
-
-// check vertical collision
-if (place_meeting(x, y + vsp, obj_wall))
-{
-    while ( ! place_meeting(x, y + sign(vsp), obj_wall))
-    {
-        y += sign(vsp);
-    }
-    vsp = 0;
-}
 y += vsp;
 
 

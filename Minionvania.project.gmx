@@ -55,6 +55,9 @@
         <script>scripts\scr_hero_create.gml</script>
         <script>scripts\scr_hero_step.gml</script>
       </scripts>
+      <script>scripts\scr_entity_check_platform_edges.gml</script>
+      <script>scripts\scr_entity_check_wall_collisions.gml</script>
+      <script>scripts\scr_entity_update_image_xscale.gml</script>
       <script>scripts\scr_entity_reposition.gml</script>
     </scripts>
     <scripts name="Objects">

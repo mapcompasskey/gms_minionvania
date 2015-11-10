@@ -35,68 +35,40 @@ if ( ! dying && ! hurting)
 
 
 /**
- * Check for Collisions
+ * Check for the Edge of Platforms
  */
+scr_entity_check_platform_edges();
 
-// If Horizontal Collision
-if (place_meeting(x + hsp, y, obj_wall))
+// turn around if reached edge of platform
+if (turn_around)
 {
-    while ( ! place_meeting(x + sign(hsp), y, obj_wall))
-    {
-        x += sign(hsp);
-    }
-    hsp = 0;
-    
-    key_left = !key_left;
+    key_left  = !key_left;
     key_right = !key_right;
 }
-x += hsp;
-
-// If Vertical Collision
-if (place_meeting(x, y + vsp, obj_wall))
-{
-    while ( ! place_meeting(x, y + sign(vsp), obj_wall))
-    {
-        y += sign(vsp);
-    }
-    vsp = 0;
-}
-y += vsp;
 
 
 /**
- * Check for the Edge of Platforms
+ * Check for Collisions
  */
-if (grounded && walking)
+scr_entity_check_wall_collisions();
+
+// turn around if walked into a wall
+if (turn_around)
 {
-    // if moving left and no wall 
-    if (key_left && ! position_meeting(bbox_left - 1, bbox_bottom + 1, obj_wall))
-    {
-        key_left = !key_left;
-        key_right = !key_right;
-    }
-    // else, if moving right and no wall
-    else if (key_right && ! position_meeting(bbox_right + 1, bbox_bottom + 1, obj_wall))
-    {
-        key_left = !key_left;
-        key_right = !key_right;
-    }
+    key_left  = !key_left;
+    key_right = !key_right;
 }
+
+
+/**
+ * Update Object Position
+ */
+x += hsp;
+y += vsp;
 
 
 /**
  * Update Object Sprite
  */
-
-// update the direction the object is facing
-if (facing_right && key_left)
-{
-    image_xscale = -1;
-    facing_right = false;
-}
-else if ( ! facing_right && key_right)
-{
-    image_xscale = 1;
-    facing_right = true;
-}
+scr_entity_update_image_xscale();
 

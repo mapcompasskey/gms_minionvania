@@ -118,18 +118,7 @@ if ( ! dying && ! hurting && ! crouching)
 /**
  * Update Object Sprite
  */
-
-// update the direction the object is facing
-if (facing_right && key_left)
-{
-    image_xscale = -1;
-    facing_right = false;
-}
-else if ( ! facing_right && key_right)
-{
-    image_xscale = 1;
-    facing_right = true;
-}
+scr_entity_update_image_xscale();
 
 // update the object's sprite
 if (crouching)
