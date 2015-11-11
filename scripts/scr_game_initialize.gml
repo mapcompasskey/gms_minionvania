@@ -1,7 +1,7 @@
 /**
  * Set Global Variables
  *
- * Loaded in the creation code of "rm_initialize" when game begins.
+ * Loaded in the creation code of "rm_initialize" when the game begins.
  */
 
 global.previous_room = false;
