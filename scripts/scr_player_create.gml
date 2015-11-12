@@ -22,6 +22,9 @@ attacking = false;
 hero_touching = -1;
 grounded = false;
 facing_right = true;
+on_attack_cooldown = false;
+attack_cooldown_time = 4;
+attack_cooldown_timer = 0;
 
 // inputs
 key_left = false
