@@ -10,84 +10,86 @@
       <sprite>sprites\spr_menu_arrow</sprite>
       <sprite>sprites\spr_minionvania</sprite>
     </sprites>
-    <sprites name="Objects">
-      <sprite>sprites\spr_wall</sprite>
-      <sprite>sprites\spr_hero_trigger</sprite>
-      <sprite>sprites\spr_health_pack</sprite>
-    </sprites>
     <sprites name="Entities">
       <sprite>sprites\spr_player</sprite>
       <sprite>sprites\spr_monster</sprite>
       <sprite>sprites\spr_hero</sprite>
     </sprites>
+    <sprites name="Misc">
+      <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_hero_trigger</sprite>
+      <sprite>sprites\spr_health_pack</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <scripts name="Controllers">
-      <scripts name="Menu">
-        <script>scripts\scr_menu_create.gml</script>
-        <script>scripts\scr_menu_step.gml</script>
-        <script>scripts\scr_menu_draw.gml</script>
-      </scripts>
-      <scripts name="Level">
-        <script>scripts\scr_level_create.gml</script>
-        <script>scripts\scr_level_step.gml</script>
-        <script>scripts\scr_level_draw_gui.gml</script>
-      </scripts>
-      <scripts name="PauseScreen">
-        <script>scripts\scr_pause_screen_create.gml</script>
-        <script>scripts\scr_pause_screen_step.gml</script>
-        <script>scripts\scr_pause_screen_draw_gui.gml</script>
-        <script>scripts\scr_pause_screen_draw.gml</script>
-      </scripts>
-      <scripts name="BattleTransition">
-        <script>scripts\scr_battle_transition_create.gml</script>
-        <script>scripts\scr_battle_transition_draw.gml</script>
-      </scripts>
-    </scripts>
-    <scripts name="Entities">
-      <scripts name="Player">
-        <script>scripts\scr_player_create.gml</script>
-        <script>scripts\scr_player_step.gml</script>
-        <script>scripts\scr_player_is_attacking.gml</script>
-        <script>scripts\scr_player_is_crouching.gml</script>
-        <script>scripts\scr_player_is_jumping.gml</script>
-        <script>scripts\scr_player_is_walking.gml</script>
-        <script>scripts\scr_player_end_step.gml</script>
-      </scripts>
-      <scripts name="Monster">
-        <script>scripts\scr_monster_create.gml</script>
-        <script>scripts\scr_monster_step.gml</script>
-        <script>scripts\scr_monster_is_walking.gml</script>
-      </scripts>
-      <scripts name="Hero">
-        <script>scripts\scr_hero_create.gml</script>
-        <script>scripts\scr_hero_step.gml</script>
-        <script>scripts\scr_hero_is_idling.gml</script>
-        <script>scripts\scr_hero_is_attacking.gml</script>
-        <script>scripts\scr_hero_is_jumping.gml</script>
-        <script>scripts\scr_hero_is_walking.gml</script>
-        <script>scripts\scr_hero_draw.gml</script>
-      </scripts>
-      <script>scripts\scr_entity_check_platform_edges.gml</script>
-      <script>scripts\scr_entity_check_wall_collisions.gml</script>
-      <script>scripts\scr_entity_update_image_xscale.gml</script>
-      <script>scripts\scr_entity_reposition.gml</script>
-    </scripts>
-    <scripts name="Objects">
-      <scripts name="HeroTrigger">
-        <script>scripts\scr_hero_trigger_create.gml</script>
-        <script>scripts\scr_hero_trigger_step.gml</script>
-      </scripts>
-      <scripts name="HealthPack">
-        <script>scripts\spr_health_pack_create.gml</script>
-        <script>scripts\spr_health_pack_step.gml</script>
-      </scripts>
-    </scripts>
     <script>scripts\scr_game_initialize.gml</script>
     <script>scripts\scr_level_initialize.gml</script>
     <script>scripts\scr_room_data.gml</script>
+    <scripts name="Objects">
+      <scripts name="Controllers">
+        <scripts name="Menu">
+          <script>scripts\scr_menu_create.gml</script>
+          <script>scripts\scr_menu_step.gml</script>
+          <script>scripts\scr_menu_draw.gml</script>
+        </scripts>
+        <scripts name="Level">
+          <script>scripts\scr_level_create.gml</script>
+          <script>scripts\scr_level_step.gml</script>
+          <script>scripts\scr_level_draw_gui.gml</script>
+        </scripts>
+        <scripts name="PauseScreen">
+          <script>scripts\scr_pause_screen_create.gml</script>
+          <script>scripts\scr_pause_screen_step.gml</script>
+          <script>scripts\scr_pause_screen_draw_gui.gml</script>
+          <script>scripts\scr_pause_screen_draw.gml</script>
+        </scripts>
+        <scripts name="BattleTransition">
+          <script>scripts\scr_battle_transition_create.gml</script>
+          <script>scripts\scr_battle_transition_draw.gml</script>
+        </scripts>
+      </scripts>
+      <scripts name="Entities">
+        <scripts name="Player">
+          <script>scripts\scr_player_create.gml</script>
+          <script>scripts\scr_player_step.gml</script>
+          <script>scripts\scr_player_is_attacking.gml</script>
+          <script>scripts\scr_player_is_crouching.gml</script>
+          <script>scripts\scr_player_is_jumping.gml</script>
+          <script>scripts\scr_player_is_walking.gml</script>
+          <script>scripts\scr_player_end_step.gml</script>
+        </scripts>
+        <scripts name="Monster">
+          <script>scripts\scr_monster_create.gml</script>
+          <script>scripts\scr_monster_step.gml</script>
+          <script>scripts\scr_monster_is_walking.gml</script>
+        </scripts>
+        <scripts name="Hero">
+          <script>scripts\scr_hero_create.gml</script>
+          <script>scripts\scr_hero_step.gml</script>
+          <script>scripts\scr_hero_is_idling.gml</script>
+          <script>scripts\scr_hero_is_attacking.gml</script>
+          <script>scripts\scr_hero_is_jumping.gml</script>
+          <script>scripts\scr_hero_is_walking.gml</script>
+          <script>scripts\scr_hero_draw.gml</script>
+        </scripts>
+        <script>scripts\scr_entity_check_platform_edges.gml</script>
+        <script>scripts\scr_entity_check_wall_collisions.gml</script>
+        <script>scripts\scr_entity_update_image_xscale.gml</script>
+        <script>scripts\scr_entity_reposition.gml</script>
+      </scripts>
+      <scripts name="Misc">
+        <scripts name="HeroTrigger">
+          <script>scripts\scr_hero_trigger_create.gml</script>
+          <script>scripts\scr_hero_trigger_step.gml</script>
+        </scripts>
+        <scripts name="HealthPack">
+          <script>scripts\spr_health_pack_create.gml</script>
+          <script>scripts\spr_health_pack_step.gml</script>
+        </scripts>
+      </scripts>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_04b03_menu</font>
@@ -100,15 +102,15 @@
       <object>objects\cont_level</object>
       <object>objects\cont_battle_transition</object>
     </objects>
-    <objects name="Objects">
-      <object>objects\obj_wall</object>
-      <object>objects\obj_hero_trigger</object>
-      <object>objects\obj_health_pack</object>
-    </objects>
     <objects name="Entities">
       <object>objects\obj_player</object>
       <object>objects\obj_monster</object>
       <object>objects\obj_hero</object>
+    </objects>
+    <objects name="Misc">
+      <object>objects\obj_wall</object>
+      <object>objects\obj_hero_trigger</object>
+      <object>objects\obj_health_pack</object>
     </objects>
   </objects>
   <rooms name="rooms">
