@@ -17,7 +17,7 @@ if (argument0 == true)
         // if room_data is empty
         if (ds_list_size(global.room_data) == 0)
         {
-            // get the player data
+            // get the Player data
             with (obj_player)
             {
                 // create a new ds_map
@@ -35,7 +35,26 @@ if (argument0 == true)
                 show_debug_message("Save Player, x: " + string(x) + ", y: " + string(y));
             }
             
-            // iterate through all monster objects and capture their current data
+            // get the Hero data
+            with (obj_hero)
+            {
+                // create a new ds_map
+                mapdata = ds_map_create();
+                
+                // add object data to the ds_map
+                ds_map_add(mapdata, "object_name", "obj_hero");
+                ds_map_add(mapdata, "object_index", object_index);
+                ds_map_add(mapdata, "x", x);
+                ds_map_add(mapdata, "y", y);
+                ds_map_add(mapdata, "hp", hp);
+                
+                // add the ds_map to the ds_list
+                ds_list_add(global.room_data, mapdata);
+                
+                show_debug_message("Save Hero, x: " + string(x) + ", y: " + string(y));
+            }
+            
+            // iterate through all Monster objects and capture their current data
             with (obj_monster)
             {
                 // create a new ds_map
@@ -63,12 +82,19 @@ if (argument0 == true)
  * Restore Room Data
  *
  * Loaded when a Level controller is created. If the room isn't a battle
- * room and if there is room_data, remove the objects added by the room
- * editor and iterate through the room_data, adding the objects.
+ * room and if there is room_data, iterate through the room_data.
+ *
+ * Assuming there is only one Player and Hero object (and that they exist in
+ * the room), find and update their positions and any additional data they require.
+ *
+ * All the Monster objects that are created from the room editor are destroyed and
+ * recreated only if there were any remaining in the room.
+ *
+ * Every ds_map in the room_data list should contain the object name, x and y positions.
  */
 else if (argument0 == false)
 {
-    var i, mapdata, obj_index, obj_name, obj_x, obj_y, inst;
+    var i, mapdata, obj_name, obj_x, obj_y, inst;
     
     // if not in the battle room
     if ( ! global.battle_mode)
@@ -76,7 +102,7 @@ else if (argument0 == false)
         // if there is room data
         if (ds_list_size(global.room_data))
         {
-            // remove monster objects added by the room creation code
+            // remove Monster objects added by the room creation code
             with (obj_monster)
             {
                 instance_destroy();
@@ -100,7 +126,7 @@ else if (argument0 == false)
                         // if Player object
                         case "obj_player":
                         {
-                            // find and update the player
+                            // find and update the Player
                             with (obj_player)
                             {
                                 x = obj_x;
@@ -112,15 +138,30 @@ else if (argument0 == false)
                             break;
                         }
                         
+                        // if Hero object
+                        case "obj_hero":
+                        {
+                            // find and update the Hero
+                            with (obj_hero)
+                            {
+                                x = obj_x;
+                                y = obj_y;
+                                hp = ds_map_find_value(mapdata, "hp");;
+                                
+                                show_debug_message("Create Hero, x: " + string(x) + ", y: " + string(y));
+                            }
+                            break;
+                        }
+                        
                         // if Monster object
                         case "obj_monster":
                         {
                             // create a new Monster object and update it
                             inst = instance_create(obj_x, obj_y, obj_monster);
                             
-                            inst.key_left  = ds_map_find_value(mapdata, "key_left");
+                            inst.key_left = ds_map_find_value(mapdata, "key_left");
                             inst.key_right = ds_map_find_value(mapdata, "key_right");
-                            inst.damage    = ds_map_find_value(mapdata, "damage");
+                            inst.damage = ds_map_find_value(mapdata, "damage");
                             
                             show_debug_message("Create Monster, x: " + string(inst.x) + ", y: " + string(inst.y));
                             break;
