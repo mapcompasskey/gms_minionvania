@@ -12,8 +12,10 @@
     </sprites>
     <sprites name="Entities">
       <sprite>sprites\spr_player</sprite>
+      <sprite>sprites\spr_player_battle</sprite>
       <sprite>sprites\spr_monster</sprite>
       <sprite>sprites\spr_hero</sprite>
+      <sprite>sprites\spr_hero_battle</sprite>
     </sprites>
     <sprites name="Misc">
       <sprite>sprites\spr_wall</sprite>
@@ -24,9 +26,6 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_game_initialize.gml</script>
-    <script>scripts\scr_level_initialize.gml</script>
-    <script>scripts\scr_room_data.gml</script>
     <scripts name="Objects">
       <scripts name="Controllers">
         <scripts name="Menu">
@@ -90,6 +89,9 @@
         </scripts>
       </scripts>
     </scripts>
+    <script>scripts\scr_game_initialize.gml</script>
+    <script>scripts\scr_level_initialize.gml</script>
+    <script>scripts\scr_room_data.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_04b03_menu</font>
@@ -104,8 +106,10 @@
     </objects>
     <objects name="Entities">
       <object>objects\obj_player</object>
+      <object>objects\obj_player_battle</object>
       <object>objects\obj_monster</object>
       <object>objects\obj_hero</object>
+      <object>objects\obj_hero_battle</object>
     </objects>
     <objects name="Misc">
       <object>objects\obj_wall</object>

@@ -35,7 +35,7 @@ if ( ! dying && ! hurting)
                     // if not previously colliding with object
                     if (hero != hero_touching)
                     {
-                        //attacking = true;
+                        on_attack_cooldown = true;
                         
                         // add the Battle Transition controller
                         instance_create(0, 0, cont_battle_transition);

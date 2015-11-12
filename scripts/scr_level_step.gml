@@ -17,6 +17,7 @@ if (global.battle_mode)
         // return to previous room
         if (global.previous_room)
         {
+            global.battle_mode = false;
             room_goto(global.previous_room);
         }
     }    

@@ -42,13 +42,13 @@ scr_entity_update_image_xscale();
 // update the object's sprite
 if (crouching)
 {
-    sprite_index = spr_player;
+    //sprite_index = spr_player;
     image_speed = 0;
     image_index = 1;
 }
 else
 {
-    sprite_index = spr_player;
+    //sprite_index = spr_player;
     image_speed = 0;
     image_index = 0;
 }
