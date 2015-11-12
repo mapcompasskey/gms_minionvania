@@ -45,6 +45,10 @@
         <script>scripts\scr_battle_transition_create.gml</script>
         <script>scripts\scr_battle_transition_draw.gml</script>
       </scripts>
+      <scripts name="RoomData">
+        <script>scripts\scr_room_data_create.gml</script>
+        <script>scripts\scr_room_data_update.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Entities">
       <scripts name="Player">
