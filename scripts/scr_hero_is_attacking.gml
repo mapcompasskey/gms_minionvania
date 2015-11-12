@@ -25,6 +25,8 @@ if ( ! dying && ! hurting && ! idling)
             
             image_alpha = 0.25;
             monster.image_alpha = 0.25;
+            
+            can_be_attacked = false;
         }
     }
     monster_touching = monster;
@@ -61,6 +63,8 @@ if ( ! dying && ! hurting && ! idling)
             attacking = false;
             attack_timer = 0;
             image_alpha = 1;
+            
+            can_be_attacked = true;
         }
     }
 }

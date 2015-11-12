@@ -29,8 +29,8 @@ if ( ! dying && ! hurting)
             hero = instance_place(x, y, obj_hero);
             if (hero)
             {
-                // if the hero is not already attacking another monster
-                if ( ! hero.attacking)
+                // if the hero can be attacked
+                if (hero.can_be_attacked)
                 {
                     // if not previously colliding with object
                     if (hero != hero_touching)

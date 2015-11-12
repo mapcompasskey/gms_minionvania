@@ -22,6 +22,7 @@ idling = false;
 grounded = false;
 facing_right = true;
 monster_touching = -1;
+can_be_attacked = true;
 
 attack_time = 1;
 attack_timer = 0;

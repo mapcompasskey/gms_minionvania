@@ -24,7 +24,7 @@ if (argument0 == true)
                 mapdata = ds_map_create();
                 
                 // add object data to the ds_map
-                ds_map_add(mapdata, "object_name", "obj_player");
+                ds_map_add(mapdata, "object_name", object_get_name(object_index));
                 ds_map_add(mapdata, "object_index", object_index);
                 ds_map_add(mapdata, "x", x);
                 ds_map_add(mapdata, "y", y);
@@ -42,11 +42,17 @@ if (argument0 == true)
                 mapdata = ds_map_create();
                 
                 // add object data to the ds_map
-                ds_map_add(mapdata, "object_name", "obj_hero");
+                ds_map_add(mapdata, "object_name", object_get_name(object_index));
                 ds_map_add(mapdata, "object_index", object_index);
                 ds_map_add(mapdata, "x", x);
                 ds_map_add(mapdata, "y", y);
                 ds_map_add(mapdata, "hp", hp);
+                ds_map_add(mapdata, "hsp", hsp);
+                ds_map_add(mapdata, "vsp", vsp);
+                ds_map_add(mapdata, "movespeed", movespeed);
+                ds_map_add(mapdata, "jumpspeed", jumpspeed);
+                ds_map_add(mapdata, "key_left", key_left);
+                ds_map_add(mapdata, "key_right", key_right);
                 
                 // add the ds_map to the ds_list
                 ds_list_add(global.room_data, mapdata);
@@ -61,7 +67,7 @@ if (argument0 == true)
                 mapdata = ds_map_create();
                 
                 // add object data to the ds_map
-                ds_map_add(mapdata, "object_name", "obj_monster");
+                ds_map_add(mapdata, "object_name", object_get_name(object_index));
                 ds_map_add(mapdata, "object_index", object_index);
                 ds_map_add(mapdata, "x", x);
                 ds_map_add(mapdata, "y", y);
@@ -73,6 +79,25 @@ if (argument0 == true)
                 ds_list_add(global.room_data, mapdata);
                 
                 show_debug_message("Save Monster, x: " + string(x) + ", y: " + string(y));
+            }
+            
+            // iterate through all Health Pack objects and capture their current data
+            with (obj_health_pack)
+            {
+                // create a new ds_map
+                mapdata = ds_map_create();
+                
+                // add object data to the ds_map
+                ds_map_add(mapdata, "object_name", object_get_name(object_index));
+                ds_map_add(mapdata, "object_index", object_index);
+                ds_map_add(mapdata, "x", x);
+                ds_map_add(mapdata, "y", y);
+                ds_map_add(mapdata, "hp", hp);
+                
+                // add the ds_map to the ds_list
+                ds_list_add(global.room_data, mapdata);
+                
+                show_debug_message("Save Health Pack, x: " + string(x) + ", y: " + string(y));
             }
         }
     }
@@ -104,6 +129,12 @@ else if (argument0 == false)
         {
             // remove Monster objects added by the room creation code
             with (obj_monster)
+            {
+                instance_destroy();
+            }
+            
+            // remove Health Pack objects added by the room creation code
+            with (obj_health_pack)
             {
                 instance_destroy();
             }
@@ -146,7 +177,13 @@ else if (argument0 == false)
                             {
                                 x = obj_x;
                                 y = obj_y;
-                                hp = ds_map_find_value(mapdata, "hp");;
+                                hp = ds_map_find_value(mapdata, "hp");
+                                hsp = ds_map_find_value(mapdata, "hsp");
+                                vsp = ds_map_find_value(mapdata, "vsp");
+                                movespeed = ds_map_find_value(mapdata, "movespeed");
+                                jumpspeed = ds_map_find_value(mapdata, "jumpspeed");
+                                key_left = ds_map_find_value(mapdata, "key_left");
+                                key_right = ds_map_find_value(mapdata, "key_right");
                                 
                                 show_debug_message("Create Hero, x: " + string(x) + ", y: " + string(y));
                             }
@@ -164,6 +201,18 @@ else if (argument0 == false)
                             inst.damage = ds_map_find_value(mapdata, "damage");
                             
                             show_debug_message("Create Monster, x: " + string(inst.x) + ", y: " + string(inst.y));
+                            break;
+                        }
+                        
+                        // if Health Pack object
+                        case "obj_health_pack":
+                        {
+                            // create a new Health Pack object and update it
+                            inst = instance_create(obj_x, obj_y, obj_health_pack);
+                            
+                            inst.hp = ds_map_find_value(mapdata, "hp");
+                            
+                            show_debug_message("Create Healt Pack, x: " + string(inst.x) + ", y: " + string(inst.y));
                             break;
                         }
                     }
