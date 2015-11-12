@@ -10,9 +10,7 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>// add the level controller
-instance_create(0, 0, cont_level);
-global.battle_mode = true;</code>
+  <code>scr_level_initialize(true);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
