@@ -59,10 +59,12 @@
           <script>scripts\scr_player_is_walking.gml</script>
           <script>scripts\scr_player_end_step.gml</script>
         </scripts>
-        <scripts name="Monster">
-          <script>scripts\scr_monster_create.gml</script>
-          <script>scripts\scr_monster_step.gml</script>
-          <script>scripts\scr_monster_is_walking.gml</script>
+        <scripts name="PlayerBattle">
+          <script>scripts\scr_player_battle_create.gml</script>
+          <script>scripts\scr_player_battle_step.gml</script>
+          <script>scripts\scr_player_battle_is_jumping.gml</script>
+          <script>scripts\scr_player_battle_is_walking.gml</script>
+          <script>scripts\scr_player_battle_end_step.gml</script>
         </scripts>
         <scripts name="Hero">
           <script>scripts\scr_hero_create.gml</script>
@@ -72,6 +74,17 @@
           <script>scripts\scr_hero_is_jumping.gml</script>
           <script>scripts\scr_hero_is_walking.gml</script>
           <script>scripts\scr_hero_draw.gml</script>
+        </scripts>
+        <scripts name="HeroBattle">
+          <script>scripts\scr_hero_battle_create.gml</script>
+          <script>scripts\scr_hero_battle_step.gml</script>
+          <script>scripts\scr_hero_battle_is_walking.gml</script>
+          <script>scripts\scr_hero_battle_draw.gml</script>
+        </scripts>
+        <scripts name="Monster">
+          <script>scripts\scr_monster_create.gml</script>
+          <script>scripts\scr_monster_step.gml</script>
+          <script>scripts\scr_monster_is_walking.gml</script>
         </scripts>
         <script>scripts\scr_entity_check_platform_edges.gml</script>
         <script>scripts\scr_entity_check_wall_collisions.gml</script>

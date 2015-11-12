@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_hero_create();
+            <string>scr_hero_battle_create();
 </string>
           </argument>
         </arguments>
@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_hero_step();
+            <string>scr_hero_battle_step();
 </string>
           </argument>
         </arguments>
@@ -71,7 +71,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_hero_draw();
+            <string>scr_hero_battle_draw();
 </string>
           </argument>
         </arguments>
