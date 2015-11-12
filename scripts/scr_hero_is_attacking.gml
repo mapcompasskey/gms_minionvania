@@ -11,7 +11,7 @@ if ( ! dying && ! hurting && ! idling)
         // if not previously colliding with object
         if (monster != monster_touching)
         {
-            current_hp = hp;
+            current_hp = global.hero_health;
             
             // amount of damage to take
             damage_taken = 30;
@@ -43,7 +43,7 @@ if ( ! dying && ! hurting && ! idling)
         {
             health_rate = damage_taken;
         }
-        hp = current_hp - health_rate;
+        global.hero_health = current_hp - health_rate;
         
         // if the timer has ended
         if (attack_timer >= (attack_time * 1000000))

@@ -11,10 +11,17 @@ if (hero)
     {
         hero_touching = hero;
         
-        // increase the player's health
-        hero.hp += hp;
-        
-        instance_destroy();
+        if (global.hero_health < hero.max_health)
+        {
+            // increase the hero's health
+            global.hero_health += hp;
+            if (global.hero_health > hero.max_health)
+            {
+                global.hero_health = hero.max_health;
+            }
+            
+            instance_destroy();
+        }
     }
 }
 hero_touching = hero;

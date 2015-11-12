@@ -2,7 +2,6 @@
  * Initialize Variables
  */
 
-hp = 100;
 grav = 0.5;
 hsp = 0;
 vsp = 0;
@@ -34,4 +33,8 @@ idle_timer = 0;
 key_left = false;
 key_right = false;
 key_jump_pressed = false;
+
+// set the hero's health
+max_health = 100;
+global.hero_health = max_health;
 
