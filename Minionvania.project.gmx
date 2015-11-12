@@ -62,6 +62,7 @@
         <scripts name="PlayerBattle">
           <script>scripts\scr_player_battle_create.gml</script>
           <script>scripts\scr_player_battle_step.gml</script>
+          <script>scripts\scr_player_battle_is_hurting.gml</script>
           <script>scripts\scr_player_battle_is_jumping.gml</script>
           <script>scripts\scr_player_battle_is_walking.gml</script>
           <script>scripts\scr_player_battle_end_step.gml</script>

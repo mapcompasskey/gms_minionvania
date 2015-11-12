@@ -5,7 +5,8 @@
 if ( ! hurting && ! dying && ! crouching && ! attacking)
 {
     // if grounded and just pressed the JUMP button
-    if (grounded && ! jumping && key_jump_pressed)
+    //if (grounded && ! jumping && key_jump_pressed)
+    if (key_jump_pressed)
     {
         jumping = true;
         grounded = false;

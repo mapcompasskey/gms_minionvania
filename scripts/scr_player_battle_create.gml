@@ -14,11 +14,15 @@ jumping = false;
 falling = false;
 crouching = false;
 hurting = false;
+recovering = false;
 dying = false;
 attacking = false;
 
 grounded = false;
 facing_right = true;
+hurt_direction = 1;
+recover_time = 1;
+recover_timer = 0;
 
 // inputs
 key_left = false
