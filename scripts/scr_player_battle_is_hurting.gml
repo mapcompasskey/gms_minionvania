@@ -19,23 +19,23 @@ if ( ! dying && ! hurting && ! recovering)
         // reduce player health
         global.player_health -= 10;
         
-        // apply vertical bounce back
-        vsp = -8;
+        // apply vertical knockback
+        vsp = knockback_jumpspeed;
         grounded = false;
         
-        // find direction to bounce the player
-        hurt_direction = 1;
+        // find direction to knock the player
+        knockback_direction = 1;
         if (x < hero.x)
         {
-            hurt_direction = -1;
+            knockback_direction = -1;
         }
     }
 }
 
 if (hurting)
 {
-    // apply horizontal bounce back
-    hsp = hurt_direction * 4;
+    // apply horizontal knockback
+    hsp = knockback_direction * knockback_movespeed;
     
     if (grounded)
     {
