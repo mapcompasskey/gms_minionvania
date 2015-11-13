@@ -27,7 +27,7 @@ if (vsp < max_vsp)
  * Check Object State
  */
 
-scr_player_battle_is_hurting();
+//scr_player_battle_is_hurting();
 scr_player_battle_is_jumping();
 scr_player_battle_is_walking();
 

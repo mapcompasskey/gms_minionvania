@@ -16,12 +16,14 @@
       <sprite>sprites\spr_monster</sprite>
       <sprite>sprites\spr_hero</sprite>
       <sprite>sprites\spr_hero_battle</sprite>
+      <sprite>sprites\spr_hero_attack_1</sprite>
     </sprites>
     <sprites name="Misc">
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_hero_trigger</sprite>
       <sprite>sprites\spr_health_pack</sprite>
     </sprites>
+    <sprite>sprites\spr_yellow_dot</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -79,8 +81,15 @@
         <scripts name="HeroBattle">
           <script>scripts\scr_hero_battle_create.gml</script>
           <script>scripts\scr_hero_battle_step.gml</script>
-          <script>scripts\scr_hero_battle_is_walking.gml</script>
+          <script>scripts\scr_hero_battle_is_idling.gml</script>
+          <script>scripts\scr_hero_battle_state_1.gml</script>
+          <script>scripts\scr_hero_battle_state_2.gml</script>
+          <script>scripts\scr_hero_battle_state_3.gml</script>
           <script>scripts\scr_hero_battle_draw.gml</script>
+          <scripts name="Attacks">
+            <script>scripts\scr_hero_attack_1_create.gml</script>
+            <script>scripts\scr_hero_attack_1_step.gml</script>
+          </scripts>
         </scripts>
         <scripts name="Monster">
           <script>scripts\scr_monster_create.gml</script>
@@ -124,6 +133,7 @@
       <object>objects\obj_monster</object>
       <object>objects\obj_hero</object>
       <object>objects\obj_hero_battle</object>
+      <object>objects\obj_hero_attack_1</object>
     </objects>
     <objects name="Misc">
       <object>objects\obj_wall</object>
