@@ -2,6 +2,9 @@
  * Update
  */
 
+// is object standing on a wall
+grounded = place_meeting(x, y + 1, obj_wall);
+
 // update movespeed
 if (facing_right)
 {
@@ -11,12 +14,24 @@ else
 {
     hsp = -movespeed;
 }
-vsp = 0;
 
-// update kill timer
-kill_timer += delta_time;
-if (kill_timer > (kill_time * 1000000))
+// apply gravity
+if (vsp < max_vsp)
 {
+    vsp += grav;
+}
+
+// if not jumping
+if ( ! jumping)
+{
+    vsp = -jumpspeed;
+    jumping = true;
+}
+
+// if grounded after jumping
+if (jumping && grounded)
+{
+    instance_create(x, bbox_bottom, obj_hero_attack_3);
     instance_destroy();
 }
 

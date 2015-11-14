@@ -32,15 +32,6 @@ if (initialize_action_state_2)
     // add attack instance
     attack1 = instance_create(x, y, obj_hero_attack_1);
     attack1.facing_right = facing_right;
-    if (facing_right)
-    {
-        attack1.movespeed_x = attack1.movespeed_x;
-    }
-    else
-    {
-        attack1.movespeed_x = -attack1.movespeed_x;
-    }
-    attack1.movespeed_y = 0;
     
     // idle for a moment
     idle_time = 0.5;

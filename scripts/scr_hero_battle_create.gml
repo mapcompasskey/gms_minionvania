@@ -23,6 +23,7 @@ change_action_state = false;
 initialize_action_state_1 = true;
 initialize_action_state_2 = true;
 initialize_action_state_3 = true;
+initialize_action_state_4 = true;
 
 idle_time = 1;
 idle_timer = 0;
@@ -30,6 +31,7 @@ idle_timer = 0;
 attack_cooldown_time = 1;
 attack_cooldown_timer = 0;
 
+attack_range = 0;
 attack_count = 1;
 attack_counter = 0;
 
@@ -37,7 +39,6 @@ attack_counter = 0;
 key_left = false;
 key_right = false;
 key_jump_pressed = false;
-
 
 // get positions in the room
 room_positions = ds_map_create();

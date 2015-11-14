@@ -8,7 +8,7 @@ grounded = place_meeting(x, y + 1, obj_wall);
 // reset walking
 hsp = 0;
 walking = false;
-    
+
 // apply gravity
 if (vsp < max_vsp)
 {
@@ -27,7 +27,7 @@ if ( ! idling)
     // choose a new action
     if (change_action_state)
     {
-        action_state = irandom(2); // 0 - 2
+        action_state = irandom(3); // 0 - 3
         change_action_state = false;
     }
     
@@ -43,6 +43,10 @@ if ( ! idling)
             
         case 2:
             scr_hero_battle_state_3();
+            break;
+            
+        case 3:
+            scr_hero_battle_state_4();
             break;
     }
 }

@@ -50,15 +50,6 @@ else
         // add attack instance
         attack1 = instance_create(x, y, obj_hero_attack_1);
         attack1.facing_right = facing_right;
-        if (facing_right)
-        {
-            attack1.movespeed_x = attack1.movespeed_x;
-        }
-        else
-        {
-            attack1.movespeed_x = -attack1.movespeed_x;
-        }
-        attack1.movespeed_y = 0;
         
         // increment the attack counter
         attack_counter++;
