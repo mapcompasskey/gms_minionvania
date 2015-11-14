@@ -63,7 +63,7 @@ else
     if (key_left)
     {
         // move left
-        hsp = -movespeed * 1.5;
+        hsp = -movespeed * 2;
         walking = true;
     }
     
@@ -71,7 +71,7 @@ else
     else if (key_right)
     {
         // move right
-        hsp = movespeed * 2.5;
+        hsp = movespeed * 2;
         walking = true;
     }
     
