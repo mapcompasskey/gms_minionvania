@@ -29,6 +29,13 @@ if ( ! idling)
     {
         action_state = irandom(4); // 0 - 4
         change_action_state = false;
+        
+        if (ds_list_size(global.hero_action_order) > 0)
+        {
+            action_state = ds_list_find_value(global.hero_action_order, 0);
+            action_state = action_state - 1;
+            ds_list_delete(global.hero_action_order, 0);
+        }
     }
     
     switch (action_state)

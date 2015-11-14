@@ -20,6 +20,28 @@ if (global.battle_mode)
             global.battle_mode = false;
             room_goto(global.previous_room);
         }
-    }    
+    }
+    
+    // add to the hero action ds_list
+    if (keyboard_check_pressed(ord("1")))
+    {
+        ds_list_add(global.hero_action_order, 1);
+    }
+    if (keyboard_check_pressed(ord("2")))
+    {
+        ds_list_add(global.hero_action_order, 2);
+    }
+    if (keyboard_check_pressed(ord("3")))
+    {
+        ds_list_add(global.hero_action_order, 3);
+    }
+    if (keyboard_check_pressed(ord("4")))
+    {
+        ds_list_add(global.hero_action_order, 4);
+    }
+    if (keyboard_check_pressed(ord("5")))
+    {
+        ds_list_add(global.hero_action_order, 5);
+    }
 }
 
