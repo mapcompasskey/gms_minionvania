@@ -19,6 +19,7 @@
       <sprite>sprites\spr_hero_attack_1</sprite>
       <sprite>sprites\spr_hero_attack_2</sprite>
       <sprite>sprites\spr_hero_attack_3</sprite>
+      <sprite>sprites\spr_hero_attack_4</sprite>
     </sprites>
     <sprites name="Misc">
       <sprite>sprites\spr_wall</sprite>
@@ -88,6 +89,7 @@
           <script>scripts\scr_hero_battle_state_2.gml</script>
           <script>scripts\scr_hero_battle_state_3.gml</script>
           <script>scripts\scr_hero_battle_state_4.gml</script>
+          <script>scripts\scr_hero_battle_state_5.gml</script>
           <script>scripts\scr_hero_battle_draw.gml</script>
           <scripts name="Attacks">
             <script>scripts\scr_hero_attack_1_create.gml</script>
@@ -96,6 +98,9 @@
             <script>scripts\scr_hero_attack_2_step.gml</script>
             <script>scripts\scr_hero_attack_3_create.gml</script>
             <script>scripts\scr_hero_attack_3_step.gml</script>
+            <script>scripts\scr_hero_attack_4_create.gml</script>
+            <script>scripts\scr_hero_attack_4_step.gml</script>
+            <script>scripts\scr_hero_attack_4_end_step.gml</script>
           </scripts>
         </scripts>
         <scripts name="Monster">
@@ -143,6 +148,7 @@
       <object>objects\obj_hero_attack_1</object>
       <object>objects\obj_hero_attack_2</object>
       <object>objects\obj_hero_attack_3</object>
+      <object>objects\obj_hero_attack_4</object>
     </objects>
     <objects name="Misc">
       <object>objects\obj_wall</object>

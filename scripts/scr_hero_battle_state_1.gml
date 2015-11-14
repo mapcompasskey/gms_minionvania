@@ -1,7 +1,7 @@
 /**
  * State 1
  *
- * The Hero moves from one side of the screen to the another then idles for a moment.
+ * The Hero moves from one side of the screen to the other then idles for a moment.
  */
 
 if (initialize_action_state_1)
@@ -16,6 +16,10 @@ if (initialize_action_state_1)
         key_left = true;
         key_right = false;
         
+        // face left
+        image_xscale = -1;
+        facing_right = false;
+        
         // get the room's "left" position
         pnt = ds_map_find_value(room_positions, "left");
         target_x = ds_map_find_value(pnt, "x");
@@ -29,6 +33,10 @@ if (initialize_action_state_1)
         key_left = false;
         key_right = true;
         
+        // face right
+        image_xscale = 1;
+        facing_right = true;
+        
         // get the rooms "right" position
         pnt = ds_map_find_value(room_positions, "right");
         target_x = ds_map_find_value(pnt, "x");
@@ -38,23 +46,12 @@ if (initialize_action_state_1)
 
 else
 {
-    var has_reached_target = false;
-    
     // if moving left
     if (key_left)
     {
         // move left
         hsp = -movespeed;
         walking = true;
-        
-        // face left
-        image_xscale = -1;
-        facing_right = false;
-        
-        if (x <= target_x)
-        {
-            has_reached_target = true;
-        }
     }
     
     // else, if moving right
@@ -63,18 +60,10 @@ else
         // move right
         hsp = movespeed;
         walking = true;
-        
-        // face right
-        image_xscale = 1;
-        facing_right = true;
-        
-        if (x >= target_x)
-        {
-            has_reached_target = true;
-        }
     }
     
-    if (has_reached_target)
+    // if within reach of the target
+    if (point_distance(target_x, target_y, x, y) < movespeed)
     {
         // turn around
         image_xscale = -image_xscale;

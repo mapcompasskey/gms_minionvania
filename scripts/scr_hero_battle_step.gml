@@ -27,7 +27,7 @@ if ( ! idling)
     // choose a new action
     if (change_action_state)
     {
-        action_state = irandom(3); // 0 - 3
+        action_state = irandom(4); // 0 - 4
         change_action_state = false;
     }
     
@@ -47,6 +47,10 @@ if ( ! idling)
             
         case 3:
             scr_hero_battle_state_4();
+            break;
+            
+        case 4:
+            scr_hero_battle_state_5();
             break;
     }
 }
