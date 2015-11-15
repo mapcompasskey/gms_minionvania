@@ -25,6 +25,7 @@ initialize_action_state_2 = true;
 initialize_action_state_3 = true;
 initialize_action_state_4 = true;
 initialize_action_state_5 = true;
+initialize_action_state_6 = true;
 
 idle_time = 1;
 idle_timer = 0;

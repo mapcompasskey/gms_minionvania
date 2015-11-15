@@ -52,12 +52,13 @@ if (global.battle_mode)
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
     draw_set_font(fnt_04b03_gui);
-    var str = "Press 1, 2, 3, 4, or 5 to choose the#actions the Hero will take next.#";
+    var str = "Press 1, 2, 3, 4, 5, or 6 to choose the#actions the Hero will take next.#";
     str += "#1) move from one side of the screen to the other";
     str += "#2) attack with a single wave that moves across the screen";
     str += "#3) attack with multiple waves that move across the screen";
     str += "#4) throw multiple projectiles that rise into#    pillars when landing on the ground";
     str += "#5) rush toward the player with a melee attack";
+    str += "#6) throw a couple of bombs that bounce around";
     for (var i = 0; i < ds_list_size(global.hero_action_order); i++)
     {
         if (i == 0)

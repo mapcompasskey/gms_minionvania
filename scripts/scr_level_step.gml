@@ -43,5 +43,9 @@ if (global.battle_mode)
     {
         ds_list_add(global.hero_action_order, 5);
     }
+    if (keyboard_check_pressed(ord("6")))
+    {
+        ds_list_add(global.hero_action_order, 6);
+    }
 }
 

@@ -27,7 +27,7 @@ if ( ! idling)
     // choose a new action
     if (change_action_state)
     {
-        action_state = irandom(4); // 0 - 4
+        action_state = irandom(5); // 0 - 5
         change_action_state = false;
         
         if (ds_list_size(global.hero_action_order) > 0)
@@ -58,6 +58,10 @@ if ( ! idling)
             
         case 4:
             scr_hero_battle_state_5();
+            break;
+            
+        case 5:
+            scr_hero_battle_state_6();
             break;
     }
 }
