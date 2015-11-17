@@ -17,9 +17,9 @@ if (place_meeting(x + hsp, y, obj_wall))
 }
 
 // if vertical collision
-if (place_meeting(x, y + vsp, obj_wall))
+if (place_meeting(x + hsp, y + vsp, obj_wall))
 {
-    while ( ! place_meeting(x, y + sign(vsp), obj_wall))
+    while ( ! place_meeting(x + hsp, y + sign(vsp), obj_wall))
     {
         y += sign(vsp);
     }

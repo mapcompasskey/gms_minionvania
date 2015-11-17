@@ -96,6 +96,7 @@
           <script>scripts\scr_hero_battle_state_4.gml</script>
           <script>scripts\scr_hero_battle_state_5.gml</script>
           <script>scripts\scr_hero_battle_state_6.gml</script>
+          <script>scripts\scr_hero_battle_state_7.gml</script>
           <script>scripts\scr_hero_battle_draw.gml</script>
           <scripts name="Attacks">
             <script>scripts\scr_hero_attack_1_create.gml</script>

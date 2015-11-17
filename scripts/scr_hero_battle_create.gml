@@ -12,11 +12,14 @@ jumpspeed = 0;
 
 walking = false;
 idling = false;
+jumping = false;
 
 grounded = false;
 facing_right = true;
 target_x = 0;
 target_y = 0;
+velocity_x = 0;
+velocity_y = 0;
 
 action_state = 1;
 change_action_state = false;
@@ -26,6 +29,7 @@ initialize_action_state_3 = true;
 initialize_action_state_4 = true;
 initialize_action_state_5 = true;
 initialize_action_state_6 = true;
+initialize_action_state_7 = true;
 
 idle_time = 1;
 idle_timer = 0;

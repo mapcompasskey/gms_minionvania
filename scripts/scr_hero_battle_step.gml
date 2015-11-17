@@ -37,7 +37,7 @@ if ( ! idling)
             ds_list_delete(global.hero_action_order, 0);
         }
     }
-    
+    action_state = 6;
     switch (action_state)
     {
         case 0:
@@ -62,6 +62,10 @@ if ( ! idling)
             
         case 5:
             scr_hero_battle_state_6();
+            break;
+            
+        case 6:
+            scr_hero_battle_state_7();
             break;
     }
 }
