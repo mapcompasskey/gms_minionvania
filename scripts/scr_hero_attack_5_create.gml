@@ -3,15 +3,13 @@
  */
 
 scr_movement_vars();
-speed_x = 60 * 8;
-speed_y = 60 * 6;
-max_velocity_x = speed_x;
-max_velocity_y = speed_y;
+speed_x = 8;
+speed_y = 6;
 
 move_friction = 0.1;
-move_friction_min = 10;
+move_friction_min = 2;
 jump_bounce = 0.3;
-jump_bounce_min = 10;
+jump_bounce_min = 2;
 
 idling = false;
 jumping = false;

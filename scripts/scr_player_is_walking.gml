@@ -6,18 +6,18 @@ if ( ! dying && ! hurting && ! crouching && ! attacking)
 {    
     if (key_left)
     {
-        velocity_x = -speed_x;
         walking = true;
+        velocity_x = -speed_x;
     }
     else if (key_right)
     {
-        velocity_x = speed_x;
         walking = true;
+        velocity_x = speed_x;
     }
     else
     {
-        velocity_x = 0;
         walking = false;
+        velocity_x = 0;
     }
 }
 

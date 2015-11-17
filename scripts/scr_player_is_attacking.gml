@@ -11,10 +11,10 @@ if ( ! dying && ! hurting)
         if (on_attack_cooldown)
         {
             image_alpha = 0.5;
-            attack_cooldown_timer += delta_time;
+            attack_cooldown_timer += TICK;
             
             // if the timer has ended
-            if (attack_cooldown_timer >= (attack_cooldown_time * 1000000))
+            if (attack_cooldown_timer >= attack_cooldown_time)
             {
                 image_alpha = 1.0;;
                 attack_cooldown_timer = 0;

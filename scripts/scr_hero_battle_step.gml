@@ -31,7 +31,7 @@ if ( ! idling)
             ds_list_delete(global.hero_action_order, 0);
         }
     }
-    action_state = 5;
+    
     switch (action_state)
     {
         case 0:

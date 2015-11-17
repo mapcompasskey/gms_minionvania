@@ -3,10 +3,8 @@
  */
 
 scr_movement_vars();
-speed_x = 60 * 8;
-speed_y = 0;
-max_velocity_x = speed_x;
-max_velocity_y = 0;
+gravity_factor = 0;
+speed_x = 8;
 
 damage = 10;
 facing_right = true;

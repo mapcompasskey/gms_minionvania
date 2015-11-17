@@ -13,3 +13,7 @@ global.previous_room = false;
 global.battle_mode = false;
 global.hero_action_order = ds_list_create();
 
+globalvar TICK, GRAV;
+TICK = 1; // the amount of time that has passed since the last step
+GRAV = 0.5; // the gravity
+

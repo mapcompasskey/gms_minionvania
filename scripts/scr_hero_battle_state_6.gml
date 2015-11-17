@@ -34,15 +34,15 @@ if (initialize_action_state_6)
     attack_counter = 0;
     
     // start without any attack cooldown
-    attack_cooldown_time = 1;
-    attack_cooldown_timer = (attack_cooldown_time * 1000000);
+    attack_cooldown_time = 60;
+    attack_cooldown_timer = attack_cooldown_time;
 }
 
 else
 {
     // increment the attack cooldown timer
-    attack_cooldown_timer += delta_time;
-    if (attack_cooldown_timer > (attack_cooldown_time * 1000000))
+    attack_cooldown_timer += TICK;
+    if (attack_cooldown_timer > attack_cooldown_time)
     {
         // reset cooldown timer
         attack_cooldown_timer = 0;
@@ -56,7 +56,7 @@ else
         if (attack_counter >= attack_count)
         {
             // idle for a moment
-            idle_time = 2;
+            idle_time = 120;
             idling = true;
             
             // change action state

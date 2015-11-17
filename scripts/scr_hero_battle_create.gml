@@ -3,10 +3,8 @@
  */
 
 scr_movement_vars();
-speed_x = 60 * 4;
+speed_x = 4;
 speed_y = 0;
-max_velocity_x = speed_x * 2;
-max_velocity_y = 60 * 10;
 
 walking = false;
 idling = false;
@@ -30,10 +28,10 @@ initialize_action_state_5 = true;
 initialize_action_state_6 = true;
 initialize_action_state_7 = true;
 
-idle_time = 1;
+idle_time = 60;
 idle_timer = 0;
 
-attack_cooldown_time = 1;
+attack_cooldown_time = 60;
 attack_cooldown_timer = 0;
 
 attack_range = 0;

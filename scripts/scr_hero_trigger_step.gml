@@ -47,21 +47,21 @@ if (hero)
         }
         
         // update movespeed
-        if (movespeed && is_real(movespeed))
+        if (speed_x && is_real(speed_x))
         {
-            hero.movespeed = movespeed;
+            hero.speed_x = speed_x;
         }
         
-        // reset movespeed
-        if (reset_movespeed)
+        // reset speed x
+        if (reset_speed_x)
         {
-            hero.movespeed = hero.base_movespeed;
+            hero.speed_x = hero.base_speed_x;
         }
         
         // update jumpspeed and jump
-        if (jumpspeed && is_real(movespeed))
+        if (speed_y && is_real(speed_y))
         {
-            hero.jumpspeed = jumpspeed;
+            hero.speed_y = speed_y;
             hero.key_jump_pressed = true;
         }
         

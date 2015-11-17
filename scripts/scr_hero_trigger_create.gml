@@ -8,10 +8,10 @@ if_moving_left = false;
 if_moving_right = false;
 
 reset_level = false;
-reset_movespeed = false;
+reset_speed_x = false;
 
-movespeed = 0;
-jumpspeed = 0;
+speed_x = 0;
+speed_y = 0;
 
 turn_around = false;
 

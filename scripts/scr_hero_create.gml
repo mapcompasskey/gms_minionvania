@@ -3,10 +3,8 @@
  */
 
 scr_movement_vars();
-speed_x = 60 * 2;
+speed_x = 2;
 speed_y = 0;
-max_velocity_x = speed_x;
-max_velocity_y = 60 * 10;
 
 walking = false;
 jumping = false;
@@ -20,11 +18,12 @@ grounded = false;
 facing_right = true;
 monster_touching = -1;
 can_be_attacked = true;
+base_speed_x = speed_x;
 
-attack_time = 1;
+attack_time = 60;
 attack_timer = 0;
 
-idle_time = 0;
+idle_time = 30;
 idle_timer = 0;
 
 // faux object inputs

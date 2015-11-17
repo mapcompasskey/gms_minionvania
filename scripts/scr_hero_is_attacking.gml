@@ -34,10 +34,10 @@ if ( ! dying && ! hurting && ! idling)
     // if attacking
     if (attacking)
     {
-        attack_timer += delta_time;
+        attack_timer += TICK;
         
         // slowly substract the damage
-        timer_rate  = (100 * 1 / 1000000) * attack_timer;
+        timer_rate  = 100 / attack_time * attack_timer;
         health_rate = (timer_rate * damage_taken / 100);
         if (health_rate > damage_taken)
         {
@@ -46,7 +46,7 @@ if ( ! dying && ! hurting && ! idling)
         global.hero_health = current_hp - health_rate;
         
         // if the timer has ended
-        if (attack_timer >= (attack_time * 1000000))
+        if (attack_timer >= attack_time)
         {
             // destroy the monster
             with (monster) 
@@ -57,7 +57,7 @@ if ( ! dying && ! hurting && ! idling)
             // start idle state
             idling = true;
             idle_timer = 0;
-            idle_time = 0.5;
+            idle_time = 30;
             
             // end attack state
             attacking = false;

@@ -3,8 +3,7 @@
  */
 
 scr_movement_vars();
-speed_x = 60;
-max_velocity_x = speed_x;
+speed_x = 1;
 
 walking = false;
 falling = false;

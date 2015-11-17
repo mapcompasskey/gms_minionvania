@@ -3,14 +3,10 @@
  */
 
 scr_movement_vars();
-speed_x = 60 * 8;
-speed_y = 60 * 10;
-max_velocity_x = speed_x;
-max_velocity_y = speed_y + 160;
-
-knockback_speed_x = 100;
-knockback_speed_y = 100;
-knockback_direction = 1;
+speed_x = 8;
+speed_y = 12;
+max_velocity_x = 8;
+max_velocity_y = 14;
 
 walking = false;
 jumping = false;
@@ -23,8 +19,10 @@ attacking = false;
 
 grounded = false;
 facing_right = true;
-recover_time = 1;
+recover_time = 60;
 recover_timer = 0;
+knockback_speed_x = 8;
+knockback_speed_y = 8;
 
 // inputs
 key_left = false

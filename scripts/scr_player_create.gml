@@ -3,10 +3,10 @@
  */
 
 scr_movement_vars();
-speed_x = 60 * 8;
-speed_y = 60 * 10;
-max_velocity_x = speed_x;
-max_velocity_y = speed_y + 180;
+speed_x = 8;
+speed_y = 12;
+max_velocity_x = 8;
+max_velocity_y = 14;
 
 walking = false;
 jumping = false;
@@ -22,7 +22,7 @@ hero_touching = -1;
 grounded = false;
 facing_right = true;
 on_attack_cooldown = false;
-attack_cooldown_time = 4;
+attack_cooldown_time = 240;
 attack_cooldown_timer = 0;
 
 // inputs

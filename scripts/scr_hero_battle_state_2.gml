@@ -34,7 +34,7 @@ if (initialize_action_state_2)
     attack1.facing_right = facing_right;
     
     // idle for a moment
-    idle_time = 0.5;
+    idle_time = 30;
     idling = true;
     
     // change action state

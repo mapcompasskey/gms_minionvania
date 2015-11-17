@@ -17,7 +17,7 @@ grounded = place_meeting(x, y + 1, obj_wall);
  * Check Object State
  */
 
-//scr_player_battle_is_hurting();
+scr_player_battle_is_hurting();
 scr_player_battle_is_jumping();
 scr_player_battle_is_walking();
 

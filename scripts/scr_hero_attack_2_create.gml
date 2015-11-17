@@ -3,10 +3,8 @@
  */
 
 scr_movement_vars();
-speed_x = 60 * 2;
-speed_y = 60 * 8;
-max_velocity_x = 1000;
-max_velocity_y = speed_y + 180;
+speed_x = 2;
+speed_y = 12;
 
 jumping = false;
 

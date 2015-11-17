@@ -85,7 +85,7 @@ else
         attack1.hero_id = id;
         
         // idle for a moment
-        idle_time = 0.75;
+        idle_time = 50;
         idling = true;
         
         // change action state
