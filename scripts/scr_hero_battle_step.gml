@@ -6,14 +6,8 @@
 grounded = place_meeting(x, y + 1, obj_wall);
 
 // reset walking
-hsp = 0;
+velocity_x = 0;
 walking = false;
-
-// apply gravity
-if (vsp < max_vsp)
-{
-    vsp += grav;
-}
 
 
 /**
@@ -37,7 +31,7 @@ if ( ! idling)
             ds_list_delete(global.hero_action_order, 0);
         }
     }
-    action_state = 6;
+    action_state = 5;
     switch (action_state)
     {
         case 0:
@@ -72,26 +66,25 @@ if ( ! idling)
 
 
 /**
+ * Update Movement Speeds
+ */
+
+scr_movement_update();
+
+
+/**
  * Check for Collisions
  */
 
 scr_entity_check_wall_collisions();
-
-/*
-// turn around if walked into a wall
-if (turn_around)
-{
-    key_left  = !key_left;
-    key_right = !key_right;
-}
-*/
 
 
 /**
  * Update Object Position
  */
 
-x += hsp;
-y += vsp;
+x += mx;
+y += my;
+
 scr_entity_reposition();
 

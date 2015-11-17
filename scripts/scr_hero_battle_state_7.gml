@@ -83,31 +83,6 @@ if (initialize_action_state_7)
         this.jumpTo = null;
         this.jumping = true;
         */
-        
-        // starting vector
-        origin_x = x;
-        origin_y = y;
-        
-        // target vector
-        target_x = player.x;
-        target_y = player.y;
-        
-        duration = 2; // one second
-        
-        velocity_x = (target_x - origin_x) / duration;
-        velocity_y = (target_y + 0.5 * grav * duration * duration - origin_y) / duration;
-        
-        velocity_x = velocity_x / (room_speed * duration);
-        
-        //hsp = velocity_x;
-        //vsp = -velocity_y;
-        hsp = velocity_x;
-        vsp = -8;
-        
-        show_debug_message("x: " + string(velocity_x) + ", y: " + string(velocity_y) );
-        
-        grounded = false;
-        jumping = true;
     }
 }
 
@@ -115,7 +90,7 @@ else
 {
     if ( ! grounded && jumping)
     {
-        hsp = velocity_x;
+        //hsp = velocity_x;
     }
     
     if (grounded && jumping)

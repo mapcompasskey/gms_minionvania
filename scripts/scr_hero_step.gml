@@ -6,14 +6,8 @@
 grounded = place_meeting(x, y + 1, obj_wall);
 
 // reset walking
-hsp = 0;
+velocity_x = 0;
 walking = false;
-    
-// apply gravity
-if (vsp < max_vsp)
-{
-    vsp += grav;
-}
 
 
 /**
@@ -24,6 +18,13 @@ scr_hero_is_idling();
 scr_hero_is_attacking();
 scr_hero_is_jumping();
 scr_hero_is_walking();
+
+
+/**
+ * Update Movement Speeds
+ */
+
+scr_movement_update();
 
 
 /**
@@ -59,8 +60,9 @@ if (turn_around)
  * Update Object Position
  */
 
-x += hsp;
-y += vsp;
+x += mx;
+y += my;
+
 scr_entity_reposition();
 
 

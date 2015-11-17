@@ -2,16 +2,16 @@
  * Initialize Variables
  */
 
-grav = 0.5;
-hsp = 0;
-vsp = 0;
-max_vsp = 10;
-movespeed = 8;
-jumpspeed = 6;
+scr_movement_vars();
+speed_x = 60 * 8;
+speed_y = 60 * 6;
+max_velocity_x = speed_x;
+max_velocity_y = speed_y;
+
 move_friction = 0.1;
-move_friction_min = 0.05;
+move_friction_min = 10;
 jump_bounce = 0.3;
-jump_bounce_min = 0.2;
+jump_bounce_min = 10;
 
 idling = false;
 jumping = false;
@@ -23,6 +23,8 @@ kill_time = 2;
 kill_timer = 0;
 
 // randomize movement speeds
-movespeed = movespeed + (movespeed * random(2));
-jumpspeed = jumpspeed + (jumpspeed * random(2));
+speed_x = speed_x + (speed_x * random(2));
+speed_y = speed_y + (speed_y * random(2));
+max_velocity_x = speed_x;
+max_velocity_y = speed_y + 180;
 

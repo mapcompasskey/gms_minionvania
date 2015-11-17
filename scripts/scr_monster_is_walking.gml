@@ -6,12 +6,13 @@ if ( ! dying && ! hurting && ! attacking)
 {    
     if (key_left)
     {
-        hsp = -movespeed;
+        velocity_x = -speed_x;
         walking = true;
     }
     else if (key_right)
     {
-        hsp = movespeed;
+        velocity_x = speed_x;
         walking = true;
     }
 }
+

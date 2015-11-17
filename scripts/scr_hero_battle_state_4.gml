@@ -33,7 +33,7 @@ if (initialize_action_state_4)
     attack_count = 4;
     
     // set the spacing between attacks
-    attack_range = irandom(2); // 0 - 2
+    attack_range = 60 * irandom(2); // 0 - 2
 }
 
 else
@@ -44,7 +44,8 @@ else
         // add attack instance
         attack2 = instance_create(x, y, obj_hero_attack_2);
         attack2.facing_right = facing_right;
-        attack2.movespeed = attack2.movespeed + attack_range + (3 * i);
+        attack2.speed_x = attack2.speed_x + attack_range + (100 * i);
+        show_debug_message(attack2.speed_x);
     }
     
     // idle for a moment

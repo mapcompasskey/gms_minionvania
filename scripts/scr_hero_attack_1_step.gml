@@ -5,13 +5,12 @@
 // update movespeed
 if (facing_right)
 {
-    hsp = movespeed;
+    velocity_x = speed_x;
 }
 else
 {
-    hsp = -movespeed;
+    velocity_x = -speed_x;
 }
-vsp = 0;
 
 // update kill timer
 kill_timer += delta_time;
@@ -19,6 +18,9 @@ if (kill_timer > (kill_time * 1000000))
 {
     instance_destroy();
 }
+
+// update movement speeds
+scr_movement_update();
 
 // check for collisions
 scr_entity_check_wall_collisions();
@@ -30,8 +32,8 @@ if (turn_around)
 }
 
 // update object position
-x += hsp;
-y += vsp;
+x += mx;
+y += my;
 
 // update object sprite
 if (facing_right)

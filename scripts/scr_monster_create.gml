@@ -2,12 +2,9 @@
  * Initialize Variables
  */
 
-grav = 0.5;
-hsp = 0;
-vsp = 0;
-max_vsp = 10;
-movespeed = 1;
-damage = 30;
+scr_movement_vars();
+speed_x = 60;
+max_velocity_x = speed_x;
 
 walking = false;
 falling = false;
@@ -15,6 +12,7 @@ hurting = false;
 dying = false;
 attacking = false;
 
+damage = 30;
 grounded = false;
 facing_right = true;
 

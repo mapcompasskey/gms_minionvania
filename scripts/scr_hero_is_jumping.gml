@@ -7,25 +7,16 @@ if ( ! dying && ! hurting && ! attacking && ! idling)
     // if grounded and just pressed the JUMP button
     if (grounded && ! jumping && key_jump_pressed)
     {
-        vsp = -jumpspeed;
+        jumping = true;
         grounded = false;
-        jumping = true;
-        key_jump_pressed = false;
-    }
-    
-    // if jumping
-    // * in the event the hero is repositioned mid-jump when returning 
-    if (vsp < 0 && ! grounded)
-    {
-        jumping = true;
+        velocity_y = -speed_y;
         key_jump_pressed = false;
     }
     
     // if falling
-    if (vsp > 0 && ! grounded)
+    if (velocity_y > 0 && ! grounded)
     {
         falling = true;
-        key_jump_pressed = false;
     }
     
     // if grounded after jumping or falling

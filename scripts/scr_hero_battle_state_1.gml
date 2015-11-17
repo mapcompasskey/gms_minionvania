@@ -50,7 +50,7 @@ else
     if (key_left)
     {
         // move left
-        hsp = -movespeed;
+        velocity_x = -speed_x;
         walking = true;
     }
     
@@ -58,12 +58,12 @@ else
     else if (key_right)
     {
         // move right
-        hsp = movespeed;
+        velocity_x = speed_x;
         walking = true;
     }
     
     // if within reach of the target
-    if (point_distance(target_x, target_y, x, y) < movespeed)
+    if (point_distance(target_x, target_y, x, y) < 5)
     {
         // turn around
         image_xscale = -image_xscale;

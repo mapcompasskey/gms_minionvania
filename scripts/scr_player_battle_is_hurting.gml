@@ -20,7 +20,9 @@ if ( ! dying && ! hurting && ! recovering)
         global.player_health -= 10;
         
         // apply vertical knockback
-        vsp = knockback_jumpspeed;
+        //vsp = knockback_jumpspeed;
+        velocity_x = knockback_speed_x;
+        velocity_y = knockback_speed_y;
         grounded = false;
         
         // find direction to knock the player
@@ -35,7 +37,7 @@ if ( ! dying && ! hurting && ! recovering)
 if (hurting)
 {
     // apply horizontal knockback
-    hsp = knockback_direction * knockback_movespeed;
+    //hsp = knockback_direction * knockback_movespeed;
     
     if (grounded)
     {

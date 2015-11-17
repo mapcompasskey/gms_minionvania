@@ -63,16 +63,18 @@ else
     if (key_left)
     {
         // move left
-        hsp = -movespeed * 2;
         walking = true;
+        velocity_x = -speed_x * 2;
+        max_velocity_x = speed_x * 2;
     }
     
     // else, if moving right
     else if (key_right)
     {
         // move right
-        hsp = movespeed * 2;
         walking = true;
+        velocity_x = speed_x * 2;
+        max_velocity_x = speed_x * 2;
     }
     
     // if within reach of the target

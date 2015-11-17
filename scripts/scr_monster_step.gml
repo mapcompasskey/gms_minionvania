@@ -6,14 +6,8 @@
 grounded = place_meeting(x, y + 1, obj_wall);
 
 // reset walking
-hsp = 0;
+velocity_x = 0;
 walking = false;
-
-// apply gravity
-if (vsp < max_vsp)
-{
-    vsp += grav;
-}
 
 
 /**
@@ -21,6 +15,13 @@ if (vsp < max_vsp)
  */
 
 scr_monster_is_walking();
+
+
+/**
+ * Update Movement Speeds
+ */
+
+scr_movement_update();
 
 
 /**
@@ -55,8 +56,8 @@ if (turn_around)
  * Update Object Position
  */
 
-x += hsp;
-y += vsp;
+x += mx;
+y += my;
 
 scr_entity_update_image_xscale();
 

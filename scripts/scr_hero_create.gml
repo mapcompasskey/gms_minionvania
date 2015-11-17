@@ -2,13 +2,11 @@
  * Initialize Variables
  */
 
-grav = 0.5;
-hsp = 0;
-vsp = 0;
-max_vsp = 10;
-base_movespeed = 2;
-movespeed = 2;
-jumpspeed = 0;
+scr_movement_vars();
+speed_x = 60 * 2;
+speed_y = 0;
+max_velocity_x = speed_x;
+max_velocity_y = 60 * 10;
 
 walking = false;
 jumping = false;

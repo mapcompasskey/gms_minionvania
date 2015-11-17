@@ -2,13 +2,11 @@
  * Initialize Variables
  */
 
-hp = 100;
-grav = 0.5;
-hsp = 0;
-vsp = 0;
-max_vsp = 10;
-movespeed = 4;
-jumpspeed = 0;
+scr_movement_vars();
+speed_x = 60 * 4;
+speed_y = 0;
+max_velocity_x = speed_x * 2;
+max_velocity_y = 60 * 10;
 
 walking = false;
 idling = false;
@@ -21,6 +19,7 @@ target_y = 0;
 velocity_x = 0;
 velocity_y = 0;
 
+hp = 100;
 action_state = 1;
 change_action_state = false;
 initialize_action_state_1 = true;

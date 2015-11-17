@@ -23,7 +23,6 @@
         <sprite>sprites\spr_hero_attack_4</sprite>
         <sprite>sprites\spr_hero_attack_5</sprite>
         <sprite>sprites\spr_hero_attack_6</sprite>
-        <sprite>sprites\sprite17</sprite>
       </sprites>
     </sprites>
     <sprites name="Misc">
@@ -122,6 +121,8 @@
         <script>scripts\scr_entity_check_platform_edges.gml</script>
         <script>scripts\scr_entity_check_wall_collisions.gml</script>
         <script>scripts\scr_entity_update_image_xscale.gml</script>
+        <script>scripts\scr_movement_update.gml</script>
+        <script>scripts\scr_movement_vars.gml</script>
         <script>scripts\scr_entity_reposition.gml</script>
       </scripts>
       <scripts name="Misc">
@@ -171,8 +172,9 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>
-    <room>rooms\rm_level_3</room>
     <room>rooms\rm_battle_1</room>
+    <room>rooms\rm_level_4</room>
+    <room>rooms\rm_level_3</room>
     <room>rooms\rm_level_2</room>
     <room>rooms\rm_level_1</room>
     <room>rooms\rm_menu</room>

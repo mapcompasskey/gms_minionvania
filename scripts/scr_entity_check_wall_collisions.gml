@@ -5,24 +5,28 @@
 // used by NPCs to turn around
 turn_around = false;
 
-// if horizontal collision
-if (place_meeting(x + hsp, y, obj_wall))
+// check horizontal collision
+if (place_meeting(x + mx, y, obj_wall))
 {
-    while ( ! place_meeting(x + sign(hsp), y, obj_wall))
+    temp_mx = 0;
+    while ( ! place_meeting(x + temp_mx + sign(mx), y, obj_wall))
     {
-        x += sign(hsp);
+        temp_mx += sign(mx);
     }
-    hsp = 0;
+    mx = temp_mx;
+    velocity_x = 0;
     turn_around = true;
 }
 
-// if vertical collision
-if (place_meeting(x + hsp, y + vsp, obj_wall))
+// check vertical collision
+if (place_meeting(x + mx, y + my, obj_wall))
 {
-    while ( ! place_meeting(x + hsp, y + sign(vsp), obj_wall))
+    temp_my = 0;
+    while ( ! place_meeting(x + mx, y + temp_my + sign(my), obj_wall))
     {
-        y += sign(vsp);
+        temp_my += sign(my);
     }
-    vsp = 0;
+    my = temp_my;
+    velocity_y = 0;
 }
 

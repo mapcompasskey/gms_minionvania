@@ -2,14 +2,14 @@
  * Initialize Variables
  */
 
-grav = 0.5;
-hsp = 0;
-vsp = 0;
-max_vsp = 10;
-movespeed = 8;
-jumpspeed = 12;
-knockback_movespeed = 2;
-knockback_jumpspeed = -4;
+scr_movement_vars();
+speed_x = 60 * 8;
+speed_y = 60 * 10;
+max_velocity_x = speed_x;
+max_velocity_y = speed_y + 160;
+
+knockback_speed_x = 100;
+knockback_speed_y = 100;
 knockback_direction = 1;
 
 walking = false;

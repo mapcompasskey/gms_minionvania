@@ -2,14 +2,11 @@
  * Initialize Variables
  */
 
-grav = 0.5;
-hsp = 0;
-vsp = 0;
-max_vsp = 10;
-movespeed = 8;
-jumps = 0;
-jumpsmax = 2;
-jumpspeed = 12;
+scr_movement_vars();
+speed_x = 60 * 8;
+speed_y = 60 * 10;
+max_velocity_x = speed_x;
+max_velocity_y = speed_y + 180;
 
 walking = false;
 jumping = false;
@@ -19,6 +16,8 @@ hurting = false;
 dying = false;
 attacking = false;
 
+jumps = 0;
+jumpsmax = 2;
 hero_touching = -1;
 grounded = false;
 facing_right = true;

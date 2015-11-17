@@ -12,16 +12,6 @@ key_jump_released = keyboard_check_released(vk_space);
 // is object standing on a wall
 grounded = place_meeting(x, y + 1, obj_wall);
 
-// reset walking
-hsp = 0;
-walking = false;
-    
-// apply gravity
-if (vsp < max_vsp)
-{
-    vsp += grav;
-}
-
 
 /**
  * Check Object State
