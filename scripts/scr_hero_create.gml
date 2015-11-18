@@ -33,5 +33,5 @@ key_jump_pressed = false;
 
 // set the hero's health
 max_health = 100;
-global.hero_health = max_health;
+HERO_HEALTH = max_health;
 

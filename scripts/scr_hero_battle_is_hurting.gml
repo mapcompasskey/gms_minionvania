@@ -12,8 +12,8 @@ if ( ! recovering)
         recovering = true;
         
         // reduce health
-        global.hero_health -= player_attack.damage;
-        if (global.hero_health <= 0) global.hero_health = 100;
+        HERO_HEALTH -= player_attack.damage;
+        if (HERO_HEALTH <= 0) HERO_HEALTH = 100;
     }
 }
 

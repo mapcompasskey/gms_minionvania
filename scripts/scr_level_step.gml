@@ -13,46 +13,46 @@ if (keyboard_check_pressed(vk_escape))
 }
 
 // if inside the battle room
-if (global.battle_mode)
+if (IS_BATTLE_MODE)
 {
     if (keyboard_check_pressed(ord("E")))
     {
         // return to previous room
-        if (global.previous_room)
+        if (ROOM_PREVIOUS)
         {
-            global.battle_mode = false;
-            room_goto(global.previous_room);
+            IS_BATTLE_MODE = false;
+            room_goto(ROOM_PREVIOUS);
         }
     }
     
     // add to the hero action ds_list
     if (keyboard_check_pressed(ord("1")))
     {
-        ds_list_add(global.hero_action_order, 1);
+        ds_list_add(HERO_ACTION_ORDER, 1);
     }
     if (keyboard_check_pressed(ord("2")))
     {
-        ds_list_add(global.hero_action_order, 2);
+        ds_list_add(HERO_ACTION_ORDER, 2);
     }
     if (keyboard_check_pressed(ord("3")))
     {
-        ds_list_add(global.hero_action_order, 3);
+        ds_list_add(HERO_ACTION_ORDER, 3);
     }
     if (keyboard_check_pressed(ord("4")))
     {
-        ds_list_add(global.hero_action_order, 4);
+        ds_list_add(HERO_ACTION_ORDER, 4);
     }
     if (keyboard_check_pressed(ord("5")))
     {
-        ds_list_add(global.hero_action_order, 5);
+        ds_list_add(HERO_ACTION_ORDER, 5);
     }
     if (keyboard_check_pressed(ord("6")))
     {
-        ds_list_add(global.hero_action_order, 6);
+        ds_list_add(HERO_ACTION_ORDER, 6);
     }
     if (keyboard_check_pressed(ord("7")))
     {
-        ds_list_add(global.hero_action_order, 7);
+        ds_list_add(HERO_ACTION_ORDER, 7);
     }
 }
 

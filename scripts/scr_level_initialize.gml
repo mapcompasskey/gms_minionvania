@@ -7,7 +7,7 @@
  * type rooms.
  */
 
-global.battle_mode = argument0;
+IS_BATTLE_MODE = argument0;
 
 // add the level controller
 instance_create(0, 0, cont_level);

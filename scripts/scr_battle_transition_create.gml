@@ -10,8 +10,7 @@ transition_time = 1;
 transition_timer = 0;
 
 // grab the id of the current room
-global.previous_room = room;
-show_debug_message(global.previous_room);
+ROOM_PREVIOUS = room;
 
 // create a snapshot of the scene from the current application surface
 snapshot_surface = surface_create(view_wview[0], view_hview[0]);

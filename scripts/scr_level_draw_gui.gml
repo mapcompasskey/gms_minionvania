@@ -10,14 +10,14 @@ draw_set_font(fnt_04b03_gui);
 draw_text(10, 10, "ARROW keys to Move, X Key to Jump, Z Key to Attack");
 
 // if inside the battle room
-if (global.battle_mode)
+if (IS_BATTLE_MODE)
 {
     // draw player health bar
-    x1 = view_xview[0] + (global.tile_size * 3);;
-    y1 = view_yview[0] + (global.tile_size * 3);;
+    x1 = view_xview[0] + (TILE_SIZE * 3);;
+    y1 = view_yview[0] + (TILE_SIZE * 3);;
     x2 = x1 + 25;
     y2 = y1 + 200;
-    amount = global.player_health;
+    amount = PLAYER_HEALTH;
     backcol = c_dkgray;
     mincol = c_red;
     maxcol = c_red;
@@ -27,11 +27,11 @@ if (global.battle_mode)
     draw_healthbar(x1, y1, x2, y2, amount, backcol, mincol, maxcol, dir, showback, showborder);
     
     // draw hero health bar
-    x1 = view_xview[0] + view_wview[0] - (global.tile_size * 3) - 25;
-    y1 = view_yview[0] + (global.tile_size * 3);
+    x1 = view_xview[0] + view_wview[0] - (TILE_SIZE * 3) - 25;
+    y1 = view_yview[0] + (TILE_SIZE * 3);
     x2 = x1 + 25;
     y2 = y1 + 200;
-    amount = global.hero_health;
+    amount = HERO_HEALTH;
     backcol = c_dkgray;
     mincol = c_blue;
     maxcol = c_blue;
@@ -54,7 +54,7 @@ if (global.battle_mode)
     str += "#5) rush toward the player with a melee attack";
     str += "#6) throw a couple of bombs that bounce around";
     str += "#7) jump onto the player";
-    for (var i = 0; i < ds_list_size(global.hero_action_order); i++)
+    for (var i = 0; i < ds_list_size(HERO_ACTION_ORDER); i++)
     {
         if (i == 0)
         {
@@ -66,12 +66,12 @@ if (global.battle_mode)
             str += "#";
         }
         
-        str += string(ds_list_find_value(global.hero_action_order, i));
-        if ((i + 1) < ds_list_size(global.hero_action_order))
+        str += string(ds_list_find_value(HERO_ACTION_ORDER, i));
+        if ((i + 1) < ds_list_size(HERO_ACTION_ORDER))
         {
             str += ", ";
         }
     }
-    draw_text(view_xview[0] + (global.tile_size * 5), (global.tile_size * 3), str);
+    draw_text(view_xview[0] + (TILE_SIZE * 5), (TILE_SIZE * 3), str);
 }
 

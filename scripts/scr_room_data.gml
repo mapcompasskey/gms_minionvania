@@ -17,7 +17,7 @@ if (argument0 == true)
     var mapdata;
     
     // if not in the battle room
-    if ( ! global.battle_mode)
+    if ( ! IS_BATTLE_MODE)
     {
         // if room_data is empty
         if (ds_list_size(global.room_data) == 0)
@@ -127,7 +127,7 @@ else if (argument0 == false)
     var i, mapdata, obj_name, obj_x, obj_y, inst;
     
     // if not in the battle room
-    if ( ! global.battle_mode)
+    if ( ! IS_BATTLE_MODE)
     {
         // if there is room data
         if (ds_list_size(global.room_data))
