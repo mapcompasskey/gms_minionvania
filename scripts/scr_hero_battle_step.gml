@@ -10,6 +10,7 @@ grounded = place_meeting(x, y + 1, obj_wall);
  * Check Object State
  */
 
+scr_hero_battle_is_hurting();
 scr_hero_battle_is_idling();
 
 if ( ! idling)

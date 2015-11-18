@@ -7,18 +7,11 @@ draw_set_color(c_white);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_font(fnt_04b03_gui);
-draw_text(10, 10, "ARROW keys to Move, SPACE to Jump");
+draw_text(10, 10, "ARROW keys to Move, X Key to Jump, Z Key to Attack");
 
 // if inside the battle room
 if (global.battle_mode)
 {
-    // draw exit text
-    draw_set_color(c_white);
-    draw_set_halign(fa_right);
-    draw_set_valign(fa_top);
-    draw_set_font(fnt_04b03_gui);
-    draw_text(view_wview[0] - 10, 10, "Press the X key to leave");
-    
     // draw player health bar
     x1 = view_xview[0] + (global.tile_size * 3);;
     y1 = view_yview[0] + (global.tile_size * 3);;
@@ -52,7 +45,8 @@ if (global.battle_mode)
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
     draw_set_font(fnt_04b03_gui);
-    var str = "Press 1, 2, 3, 4, 5, 6, or 7 to choose the#actions the Hero will take next.#";
+    var str = "Press the E key to leave.";
+    str += "##Press 1, 2, 3, 4, 5, 6, or 7 to choose the#actions the Hero will take next.#";
     str += "#1) move from one side of the screen to the other";
     str += "#2) attack with a single wave that moves across the screen";
     str += "#3) attack with multiple waves that move across the screen";

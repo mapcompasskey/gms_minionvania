@@ -9,6 +9,7 @@ speed_y = 0;
 walking = false;
 idling = false;
 jumping = false;
+recovering = false;
 
 grounded = false;
 facing_right = true;
@@ -18,6 +19,7 @@ velocity_x = 0;
 velocity_y = 0;
 
 hp = 100;
+damage = 10;
 action_state = 1;
 change_action_state = false;
 initialize_action_state_1 = true;
@@ -30,6 +32,9 @@ initialize_action_state_7 = true;
 
 idle_time = 60;
 idle_timer = 0;
+
+recover_time = 30;
+recover_timer = 0;
 
 attack_cooldown_time = 60;
 attack_cooldown_timer = 0;

@@ -13,6 +13,7 @@
     <sprites name="Entities">
       <sprite>sprites\spr_player</sprite>
       <sprite>sprites\spr_player_battle</sprite>
+      <sprite>sprites\spr_player_attack_1</sprite>
       <sprite>sprites\spr_monster</sprite>
       <sprite>sprites\spr_hero</sprite>
       <sprite>sprites\spr_hero_battle</sprite>
@@ -74,8 +75,14 @@
           <script>scripts\scr_player_battle_step.gml</script>
           <script>scripts\scr_player_battle_is_hurting.gml</script>
           <script>scripts\scr_player_battle_is_jumping.gml</script>
+          <script>scripts\scr_player_battle_is_attacking.gml</script>
           <script>scripts\scr_player_battle_is_walking.gml</script>
           <script>scripts\scr_player_battle_end_step.gml</script>
+          <scripts name="Attacks">
+            <script>scripts\scr_player_attack_1_create.gml</script>
+            <script>scripts\scr_player_attack_1_step.gml</script>
+            <script>scripts\scr_player_attack_1_end_step.gml</script>
+          </scripts>
         </scripts>
         <scripts name="Hero">
           <script>scripts\scr_hero_create.gml</script>
@@ -89,6 +96,7 @@
         <scripts name="HeroBattle">
           <script>scripts\scr_hero_battle_create.gml</script>
           <script>scripts\scr_hero_battle_step.gml</script>
+          <script>scripts\scr_hero_battle_is_hurting.gml</script>
           <script>scripts\scr_hero_battle_is_idling.gml</script>
           <script>scripts\scr_hero_battle_state_1.gml</script>
           <script>scripts\scr_hero_battle_state_2.gml</script>
@@ -154,6 +162,8 @@
     </objects>
     <objects name="Entities">
       <object>objects\obj_player</object>
+      <object>objects\obj_player_attack</object>
+      <object>objects\obj_player_attack_1</object>
       <object>objects\obj_player_battle</object>
       <object>objects\obj_monster</object>
       <object>objects\obj_hero</object>

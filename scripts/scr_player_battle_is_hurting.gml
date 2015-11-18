@@ -17,7 +17,8 @@ if ( ! dying && ! hurting && ! recovering)
         recovering = true;
         
         // reduce player health
-        global.player_health -= 10;
+        global.player_health -= hero.damage;
+        if (global.player_health <= 0) global.player_health = 100; 
         
         // apply horizontal knockback
         if (x < hero.x)

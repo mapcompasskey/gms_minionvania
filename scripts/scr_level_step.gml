@@ -15,7 +15,7 @@ if (keyboard_check_pressed(vk_escape))
 // if inside the battle room
 if (global.battle_mode)
 {
-    if (keyboard_check_pressed(ord("X")))
+    if (keyboard_check_pressed(ord("E")))
     {
         // return to previous room
         if (global.previous_room)

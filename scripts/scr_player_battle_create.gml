@@ -24,6 +24,9 @@ recover_timer = 0;
 knockback_speed_x = 8;
 knockback_speed_y = 8;
 
+attack1 = -1;
+can_attack = true;
+
 // inputs
 key_left = false
 key_right = false;
