@@ -80,6 +80,10 @@ else
     // if within reach of the target
     if (point_distance(target_x, target_y, x, y) < attack_range)
     {
+        // stop moving
+        velocity_x = 0;
+        walking = false;
+        
         // add attack instance
         attack1 = instance_create(x, y, obj_hero_attack_4);
         attack1.hero_id = id;

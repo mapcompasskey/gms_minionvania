@@ -2,7 +2,7 @@
  * Is Attacking
  */
 
-if ( ! dying && ! hurting)
+if ( ! dying && ! hurting && ! launching)
 {
     // if not currently battling the Hero
     if ( ! global.battle_mode)

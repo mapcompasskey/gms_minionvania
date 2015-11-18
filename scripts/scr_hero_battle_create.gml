@@ -61,3 +61,7 @@ ds_map_add(pnt, "x", view_xview[0] + (view_wview[0] / 2));
 ds_map_add(pnt, "y", view_yview[0] + view_hview[0] - (32 * 3));
 ds_map_add(room_positions, "center", pnt);
 
+// set object sprite animation
+image_index = 0;
+image_speed = 0;
+

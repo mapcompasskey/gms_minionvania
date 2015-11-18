@@ -66,6 +66,7 @@
           <script>scripts\scr_player_is_crouching.gml</script>
           <script>scripts\scr_player_is_jumping.gml</script>
           <script>scripts\scr_player_is_walking.gml</script>
+          <script>scripts\scr_player_is_launching.gml</script>
           <script>scripts\scr_player_end_step.gml</script>
         </scripts>
         <scripts name="PlayerBattle">

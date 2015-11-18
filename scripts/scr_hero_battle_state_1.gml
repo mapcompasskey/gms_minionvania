@@ -65,6 +65,10 @@ else
     // if within reach of the target
     if (point_distance(target_x, target_y, x, y) < 5)
     {
+        // stop moving
+        velocity_x = 0;
+        walking = false;
+        
         // turn around
         image_xscale = -image_xscale;
         facing_right = !facing_right;

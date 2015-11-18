@@ -21,6 +21,7 @@ scr_player_is_attacking();
 scr_player_is_crouching();
 scr_player_is_jumping();
 scr_player_is_walking();
+scr_player_is_launching();
 
 
 /**

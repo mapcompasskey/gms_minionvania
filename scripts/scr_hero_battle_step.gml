@@ -5,10 +5,6 @@
 // is object standing on a wall
 grounded = place_meeting(x, y + 1, obj_wall);
 
-// reset walking
-velocity_x = 0;
-walking = false;
-
 
 /**
  * Check Object State
@@ -21,44 +17,43 @@ if ( ! idling)
     // choose a new action
     if (change_action_state)
     {
-        action_state = irandom(5); // 0 - 5
+        action_state = irandom(6) + 1; // (0 - 6) + 1
         change_action_state = false;
         
         if (ds_list_size(global.hero_action_order) > 0)
         {
             action_state = ds_list_find_value(global.hero_action_order, 0);
-            action_state = action_state - 1;
             ds_list_delete(global.hero_action_order, 0);
         }
     }
     
     switch (action_state)
     {
-        case 0:
+        case 1:
             scr_hero_battle_state_1();
             break;
             
-        case 1:
+        case 2:
             scr_hero_battle_state_2();
             break;
             
-        case 2:
+        case 3:
             scr_hero_battle_state_3();
             break;
             
-        case 3:
+        case 4:
             scr_hero_battle_state_4();
             break;
             
-        case 4:
+        case 5:
             scr_hero_battle_state_5();
             break;
             
-        case 5:
+        case 6:
             scr_hero_battle_state_6();
             break;
             
-        case 6:
+        case 7:
             scr_hero_battle_state_7();
             break;
     }

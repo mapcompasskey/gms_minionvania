@@ -2,7 +2,7 @@
  * Is Crouching
  */
 
-if ( ! hurting && ! dying && ! jumping && ! attacking)
+if ( ! hurting && ! dying && ! jumping && ! attacking && ! launching)
 {
     // if grounded and pressing the DOWN button
     if (grounded && key_down)

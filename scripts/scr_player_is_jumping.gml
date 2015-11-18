@@ -2,7 +2,7 @@
  * Is Jumping or Falling
  */
 
-if ( ! hurting && ! dying && ! crouching && ! attacking)
+if ( ! hurting && ! dying && ! crouching && ! attacking && ! launching)
 {
     // if jumping again while in the air
     if (jumping && jumps < jumpsmax && key_jump_pressed)
