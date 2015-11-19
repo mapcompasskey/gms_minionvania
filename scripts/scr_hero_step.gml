@@ -5,15 +5,12 @@
 // is object standing on a wall
 grounded = place_meeting(x, y + 1, obj_wall);
 
-// reset walking
-velocity_x = 0;
-walking = false;
-
 
 /**
  * Check Object State
  */
 
+scr_hero_is_hurting();
 scr_hero_is_idling();
 scr_hero_is_attacking();
 scr_hero_is_jumping();

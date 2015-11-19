@@ -29,6 +29,7 @@
     <sprites name="Misc">
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_floor_trap</sprite>
+      <sprite>sprites\spr_spikes</sprite>
       <sprite>sprites\spr_hero_trigger</sprite>
       <sprite>sprites\spr_health_pack</sprite>
     </sprites>
@@ -88,6 +89,7 @@
         <scripts name="Hero">
           <script>scripts\scr_hero_create.gml</script>
           <script>scripts\scr_hero_step.gml</script>
+          <script>scripts\scr_hero_is_hurting.gml</script>
           <script>scripts\scr_hero_is_idling.gml</script>
           <script>scripts\scr_hero_is_attacking.gml</script>
           <script>scripts\scr_hero_is_jumping.gml</script>
@@ -128,11 +130,11 @@
           <script>scripts\scr_monster_step.gml</script>
           <script>scripts\scr_monster_is_walking.gml</script>
         </scripts>
+        <script>scripts\scr_movement_vars.gml</script>
+        <script>scripts\scr_movement_update.gml</script>
         <script>scripts\scr_entity_check_platform_edges.gml</script>
         <script>scripts\scr_entity_check_wall_collisions.gml</script>
         <script>scripts\scr_entity_update_image_xscale.gml</script>
-        <script>scripts\scr_movement_update.gml</script>
-        <script>scripts\scr_movement_vars.gml</script>
         <script>scripts\scr_entity_reposition.gml</script>
       </scripts>
       <scripts name="Misc">
@@ -182,6 +184,7 @@
       <object>objects\obj_hero_trigger</object>
       <object>objects\obj_health_pack</object>
       <object>objects\obj_floor_trap</object>
+      <object>objects\obj_spikes</object>
     </objects>
   </objects>
   <rooms name="rooms">

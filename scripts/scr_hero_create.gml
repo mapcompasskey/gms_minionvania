@@ -13,6 +13,7 @@ hurting = false;
 dying = false;
 attacking = false;
 idling = false;
+recovering = false;
 
 grounded = false;
 facing_right = true;
@@ -22,6 +23,9 @@ base_speed_x = speed_x;
 
 attack_time = 60;
 attack_timer = 0;
+
+recover_time = 60;
+recover_timer = 0;
 
 idle_time = 30;
 idle_timer = 0;
