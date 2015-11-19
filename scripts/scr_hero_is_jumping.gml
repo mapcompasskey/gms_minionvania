@@ -24,6 +24,7 @@ if ( ! dying && ! hurting && ! attacking && ! idling)
     {
         jumping = false;
         falling = false;
+        speed_x = base_speed_x;
     }
 }
 

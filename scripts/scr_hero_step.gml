@@ -26,8 +26,9 @@ scr_movement_update();
 
 /**
  * Check for the Edge of Platforms
- * /
+ */
 
+/*
 scr_entity_check_platform_edges();
 
 // turn around if reached edge of platform
@@ -36,6 +37,8 @@ if (turn_around)
     key_left  = !key_left;
     key_right = !key_right;
 }
+
+scr_hero_find_platform();
 */
 
 

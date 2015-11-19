@@ -93,6 +93,7 @@
           <script>scripts\scr_hero_is_idling.gml</script>
           <script>scripts\scr_hero_is_attacking.gml</script>
           <script>scripts\scr_hero_is_jumping.gml</script>
+          <script>scripts\scr_hero_find_platform.gml</script>
           <script>scripts\scr_hero_is_walking.gml</script>
           <script>scripts\scr_hero_draw.gml</script>
         </scripts>
@@ -189,9 +190,11 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>
-    <room>rooms\rm_menu</room>
     <room>rooms\rm_level_3</room>
     <room>rooms\rm_battle_1</room>
+    <room>rooms\rm_menu</room>
+    <room>rooms\rm_level_3a</room>
+    <room>rooms\rm_level_3b</room>
     <room>rooms\rm_level_4</room>
   </rooms>
   <help>

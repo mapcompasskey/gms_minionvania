@@ -14,3 +14,6 @@ showback = true;
 showborder = false;
 draw_healthbar(x1, y1, x2, y2, amount, backcol, mincol, maxcol, dir, showback, showborder);
 
+// draw a little dot where the hero will move to
+draw_sprite(spr_yellow_dot, 0, target_x, target_y);
+

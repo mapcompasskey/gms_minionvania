@@ -20,6 +20,9 @@ facing_right = true;
 monster_touching = -1;
 can_be_attacked = true;
 base_speed_x = speed_x;
+target_x = 0;
+target_y = 0;
+jump_to_target = false;
 
 attack_time = 60;
 attack_timer = 0;
