@@ -6,6 +6,11 @@
 hero = instance_place(x, y, obj_hero);
 if (hero)
 {
+    if ( ! hero.grounded)
+    {
+        exit;
+    }
+    
     // if not already colliding with the Hero
     if (hero != hero_touching)
     {
@@ -75,4 +80,22 @@ if (hero)
     }
 }
 hero_touching = hero;
+
+// update sprite
+if (if_moving_right && reset_speed_x)
+{
+    image_index = 1;
+}
+else if (if_moving_left && reset_speed_x)
+{
+    image_index = 2;
+}
+else if (if_moving_right && is_real(speed_y))
+{
+    image_index = 3;
+}
+else if (if_moving_left && is_real(speed_y))
+{
+    image_index = 4;
+}
 

@@ -17,3 +17,9 @@ turn_around = false;
 
 ignore_count = 0;
 ignore_counter = 0;
+
+// set object sprite animation
+image_index = 0;
+image_speed = 0;
+image_alpha = 0.5;
+

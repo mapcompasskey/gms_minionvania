@@ -28,6 +28,7 @@
     </sprites>
     <sprites name="Misc">
       <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_floor_trap</sprite>
       <sprite>sprites\spr_hero_trigger</sprite>
       <sprite>sprites\spr_health_pack</sprite>
     </sprites>
@@ -143,6 +144,7 @@
           <script>scripts\spr_health_pack_create.gml</script>
           <script>scripts\spr_health_pack_step.gml</script>
         </scripts>
+        <script>scripts\scr_floor_trap_step.gml</script>
       </scripts>
     </scripts>
     <script>scripts\scr_game_initialize.gml</script>
@@ -179,6 +181,7 @@
       <object>objects\obj_wall</object>
       <object>objects\obj_hero_trigger</object>
       <object>objects\obj_health_pack</object>
+      <object>objects\obj_floor_trap</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -186,6 +189,7 @@
     <room>rooms\rm_menu</room>
     <room>rooms\rm_level_3</room>
     <room>rooms\rm_battle_1</room>
+    <room>rooms\rm_level_4</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
