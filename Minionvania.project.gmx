@@ -92,7 +92,6 @@
           <script>scripts\scr_player_key_create.gml</script>
           <script>scripts\scr_player_key_step.gml</script>
           <script>scripts\scr_player_key_end_step.gml</script>
-          <script>scripts\scr_player_key_draw.gml</script>
         </scripts>
         <scripts name="Hero">
           <script>scripts\scr_hero_create.gml</script>
@@ -161,7 +160,10 @@
         <scripts name="PlayerKeyhole">
           <script>scripts\scr_player_keyhole_create.gml</script>
           <script>scripts\scr_player_keyhole_step.gml</script>
-          <script>scripts\scr_player_keyhole_draw.gml</script>
+        </scripts>
+        <scripts name="DisplayMessage">
+          <script>scripts\scr_display_message_create.gml</script>
+          <script>scripts\scr_display_message_draw.gml</script>
         </scripts>
       </scripts>
     </scripts>
@@ -203,6 +205,7 @@
       <object>objects\obj_floor_trap</object>
       <object>objects\obj_spikes</object>
       <object>objects\obj_player_keyhole</object>
+      <object>objects\obj_display_message</object>
     </objects>
   </objects>
   <rooms name="rooms">

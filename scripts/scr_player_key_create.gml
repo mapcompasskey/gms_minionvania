@@ -17,4 +17,5 @@ facing_right = true;
 
 player_colliding = noone;
 player_carrying = noone;
+display_message = noone;
 

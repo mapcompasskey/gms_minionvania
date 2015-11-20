@@ -3,7 +3,7 @@
  */
 
 // if being carried by the Player
-if (player_carrying)
+if (player_carrying != noone)
 {
     x = player_carrying.x - (sprite_width / 2);
     y = player_carrying.bbox_top - sprite_height;
@@ -36,8 +36,7 @@ if (player_carrying)
 else if (PLAYER_ITEM == noone && idling)
 {
     // if colliding with the Player and the action key was pressed
-    player_colliding = instance_place(x, y, obj_player);
-    if (player_colliding && key_action)
+    if (player_colliding != noone && key_action)
     {
         PLAYER_ITEM = id;
         player_carrying = player_colliding;
