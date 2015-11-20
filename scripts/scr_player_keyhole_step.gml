@@ -18,7 +18,14 @@ if (PLAYER_ITEM)
         player_colliding = instance_place(x, y, obj_player);
         if (player_colliding && key_action)
         {
-            with (PLAYER_ITEM) instance_destroy();
+            // destroy the item
+            with (PLAYER_ITEM)
+            {
+                instance_destroy();
+            }
+            PLAYER_ITEM = noone;
+            
+            // destroy this object
             instance_destroy();
         }
     }

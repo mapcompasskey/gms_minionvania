@@ -152,8 +152,8 @@
           <script>scripts\scr_hero_trigger_step.gml</script>
         </scripts>
         <scripts name="HealthPack">
-          <script>scripts\spr_health_pack_create.gml</script>
-          <script>scripts\spr_health_pack_step.gml</script>
+          <script>scripts\scr_health_pack_create.gml</script>
+          <script>scripts\scr_health_pack_step.gml</script>
         </scripts>
         <scripts name="FloorTrap">
           <script>scripts\scr_floor_trap_step.gml</script>
@@ -161,7 +161,7 @@
         <scripts name="PlayerKeyhole">
           <script>scripts\scr_player_keyhole_create.gml</script>
           <script>scripts\scr_player_keyhole_step.gml</script>
-          <script>scripts\spr_player_keyhole_draw.gml</script>
+          <script>scripts\scr_player_keyhole_draw.gml</script>
         </scripts>
       </scripts>
     </scripts>

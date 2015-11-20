@@ -71,7 +71,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spr_player_keyhole_draw();
+            <string>scr_player_keyhole_draw();
 </string>
           </argument>
         </arguments>
