@@ -268,6 +268,7 @@
     <instance objName="obj_hero_trigger" x="800" y="800" name="inst_52A2A75E" locked="0" code="if_moving_left = true;&#xA;speed_x = 4;&#xA;speed_y = 9;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player_key" x="1056" y="832" name="inst_ED2EF570" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player_key" x="1120" y="832" name="inst_73D812EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player_keyhole" x="960" y="832" name="inst_1A1FE90A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

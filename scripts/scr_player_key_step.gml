@@ -5,41 +5,6 @@
 // check player input
 key_action = keyboard_check_pressed(ord("X"));
 
-// if the player is carrying this item and the action key was pressed
-if (PLAYER_ITEM == id && key_action)
-{
-    // point in the same direction as the Player
-    facing_right = player_carrying.facing_right;
-    
-    // throw the object
-    velocity_x = -speed_x;
-    if (facing_right)
-    {
-        velocity_x = speed_x;
-    }
-    velocity_y = -speed_y;
-    grounded = false;
-    
-    // this object is no longer being carried
-    player_carrying = noone;
-    PLAYER_ITEM = noone;
-    
-    // apply physics
-    idling = false;
-}
-
-// else, if the Player isn't carrying an item and this object is idle
-else if (PLAYER_ITEM == noone && idling)
-{
-    // if colliding with the Player and the action key was pressed
-    player_colliding = instance_place(x, y, obj_player);
-    if (player_colliding && key_action)
-    {
-        PLAYER_ITEM = id;
-        player_carrying = player_colliding;
-    }
-}
-
 // if not being carried and is not idle, apply normal physics
 if ( ! player_carrying && ! idling)
 {

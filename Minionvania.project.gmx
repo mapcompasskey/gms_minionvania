@@ -33,6 +33,7 @@
       <sprite>sprites\spr_spikes</sprite>
       <sprite>sprites\spr_hero_trigger</sprite>
       <sprite>sprites\spr_health_pack</sprite>
+      <sprite>sprites\spr_player_keyhole</sprite>
     </sprites>
     <sprite>sprites\spr_yellow_dot</sprite>
   </sprites>
@@ -157,6 +158,11 @@
         <scripts name="FloorTrap">
           <script>scripts\scr_floor_trap_step.gml</script>
         </scripts>
+        <scripts name="PlayerKeyhole">
+          <script>scripts\scr_player_keyhole_create.gml</script>
+          <script>scripts\scr_player_keyhole_step.gml</script>
+          <script>scripts\spr_player_keyhole_draw.gml</script>
+        </scripts>
       </scripts>
     </scripts>
     <script>scripts\scr_game_initialize.gml</script>
@@ -196,6 +202,7 @@
       <object>objects\obj_health_pack</object>
       <object>objects\obj_floor_trap</object>
       <object>objects\obj_spikes</object>
+      <object>objects\obj_player_keyhole</object>
     </objects>
   </objects>
   <rooms name="rooms">
