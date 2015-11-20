@@ -2,19 +2,25 @@
  * Draw GUI
  */
 
+// draw faded rectangle
+draw_set_color(c_black);
+draw_set_alpha(0.75);
+draw_rectangle(0, 0, view_xview[0] + view_wview[0], 40, false);
+draw_set_alpha(1.0);
+
 // draw text to GUI
 draw_set_color(c_white);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_font(fnt_04b03_gui);
-draw_text(10, 10, "ARROW keys to Move, X Key to Jump, Z Key to Attack");
+draw_text(10, 10, "ARROW keys to Move, Z - Attack, X - Action, SPACE - Jump");
 
 // if inside the battle room
 if (IS_BATTLE_MODE)
 {
     // draw player health bar
-    x1 = view_xview[0] + (TILE_SIZE * 3);;
-    y1 = view_yview[0] + (TILE_SIZE * 3);;
+    x1 = TILE_SIZE * 3;
+    y1 = TILE_SIZE * 3;
     x2 = x1 + 25;
     y2 = y1 + 200;
     amount = PLAYER_HEALTH;
@@ -27,8 +33,8 @@ if (IS_BATTLE_MODE)
     draw_healthbar(x1, y1, x2, y2, amount, backcol, mincol, maxcol, dir, showback, showborder);
     
     // draw hero health bar
-    x1 = view_xview[0] + view_wview[0] - (TILE_SIZE * 3) - 25;
-    y1 = view_yview[0] + (TILE_SIZE * 3);
+    x1 = view_wview[0] - (TILE_SIZE * 3) - 25;
+    y1 = TILE_SIZE * 3;
     x2 = x1 + 25;
     y2 = y1 + 200;
     amount = HERO_HEALTH;
@@ -72,6 +78,6 @@ if (IS_BATTLE_MODE)
             str += ", ";
         }
     }
-    draw_text(view_xview[0] + (TILE_SIZE * 5), (TILE_SIZE * 3), str);
+    draw_text(TILE_SIZE * 5, TILE_SIZE * 3, str);
 }
 

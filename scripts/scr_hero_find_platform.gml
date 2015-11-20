@@ -13,6 +13,9 @@
  * I can fix jumping to a lower platform by waiting until the object is
  * almost completely off the platform before starting to look for somewhere
  * to jump to.
+ *
+ * This requires the obj_wall, obj_spikes, and obj_floor_trap to be set to
+ * "solid" so the place_free() function can find them.
  */
 
 // if reached the edge of a platform

@@ -14,6 +14,7 @@ if (place_meeting(x + mx, y, obj_wall))
         temp_mx += sign(mx);
     }
     mx = temp_mx;
+    //last_velocity_x = velocity_x;
     velocity_x = 0;
     turn_around = true;
 }
@@ -27,6 +28,7 @@ if (place_meeting(x + mx, y + my, obj_wall))
         temp_my += sign(my);
     }
     my = temp_my;
+    //last_velocity_y = velocity_y;
     velocity_y = 0;
 }
 
