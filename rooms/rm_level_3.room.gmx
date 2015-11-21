@@ -268,7 +268,6 @@
     <instance objName="obj_entity_trigger" x="800" y="800" name="inst_52A2A75E" locked="0" code="if_moving_left = true;&#xA;speed_x = 4;&#xA;speed_y = 9;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player_key" x="1088" y="832" name="inst_ED2EF570" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player_key" x="1152" y="416" name="inst_73D812EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="864" y="800" name="inst_B05BAA60" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
