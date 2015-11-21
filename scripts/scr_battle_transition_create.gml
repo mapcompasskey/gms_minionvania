@@ -6,7 +6,7 @@
  */
 
 // the time in seconds for the transition to take
-transition_time = 1;
+transition_time = 60;
 transition_timer = 0;
 
 // grab the id of the current room

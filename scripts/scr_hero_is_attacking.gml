@@ -12,7 +12,7 @@ if ( ! dying && ! hurting && ! idling && ! hurting)
         if (monster)
         {
             // if not previously colliding with object
-            if (monster != monster_touching)
+            if (monster != monster_colliding)
             {
                 // stop moving
                 walking = false;
@@ -40,7 +40,7 @@ if ( ! dying && ! hurting && ! idling && ! hurting)
                 can_be_attacked = false;
             }
         }
-        monster_touching = monster;
+        monster_colliding = monster;
         
         // if attacking
         if (attacking)

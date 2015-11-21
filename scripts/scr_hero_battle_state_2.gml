@@ -1,7 +1,7 @@
 /**
  * State 2
  *
- * The Hero faces the player and attacks with a projectile then idles for a moment.
+ * The Hero faces the Player and attacks with a projectile then idles for a moment.
  */
 
 if (initialize_action_state_2)
@@ -9,29 +9,26 @@ if (initialize_action_state_2)
     show_debug_message("action state 2");
     initialize_action_state_2 = false;
     
+    // face the Player
     player = instance_find(obj_player_battle, 0);
     if (player)
     {
-        // if to the left of the player
+        // if to the left of the Player
         if (x < player.x)
         {
-            // face right
-            image_xscale = 1;
-            facing_right = true;
+            facing = RIGHT;
         }
         
-        // else, to the right of the player
+        // else, to the right of the Player
         else
         {
-            // face left
-            image_xscale = -1;
-            facing_right = false;
+            facing = LEFT;
         }
     }
     
     // add attack instance
     attack1 = instance_create(x, y, obj_hero_attack_1);
-    attack1.facing_right = facing_right;
+    attack1.facing = facing;
     
     // idle for a moment
     idle_time = 30;

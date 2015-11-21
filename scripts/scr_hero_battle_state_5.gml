@@ -27,25 +27,15 @@ if (initialize_action_state_5)
         // if to the right of the player
         if (x > player.x)
         {
-            // move left
             key_left = true;
             key_right = false;
-            
-            // face left
-            image_xscale = -1;
-            facing_right = false;
         }
     
         // else, if to the left of the player
         else
         {
-            // move right
             key_left = false;
             key_right = true;
-            
-            // face right
-            image_xscale = 1;
-            facing_right = true;
         }
     }
     else
@@ -62,27 +52,25 @@ else
     // if moving left
     if (key_left)
     {
-        // move left
+        facing = LEFT;
         walking = true;
-        velocity_x = -speed_x * 2;
-        max_velocity_x = speed_x * 2;
+        velocity_x = speed_x * 2;
     }
     
     // else, if moving right
     else if (key_right)
     {
-        // move right
+        facing = RIGHT;
         walking = true;
         velocity_x = speed_x * 2;
-        max_velocity_x = speed_x * 2;
     }
     
     // if within reach of the target
     if (point_distance(target_x, target_y, x, y) < attack_range)
     {
         // stop moving
-        velocity_x = 0;
         walking = false;
+        velocity_x = 0;
         
         // add attack instance
         attack1 = instance_create(x, y, obj_hero_attack_4);
@@ -98,5 +86,7 @@ else
         // reset state initialization
         initialize_action_state_5 = true;
     }
+    
+    velocity_x = velocity_x * facing;
 }
 

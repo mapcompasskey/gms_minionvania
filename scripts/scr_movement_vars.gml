@@ -20,4 +20,5 @@ jump_bounce_min = 0;   // 1   - if less than 1
 
 grounded = false;
 facing_right = true;
+facing = RIGHT;
 

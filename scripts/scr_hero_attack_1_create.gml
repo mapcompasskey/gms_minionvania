@@ -10,6 +10,6 @@ speed_x = 8;
 
 damage = 10;
 
-kill_time = 2;
+kill_time = 120;
 kill_timer = 0;
 

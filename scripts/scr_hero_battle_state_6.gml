@@ -9,23 +9,20 @@ if (initialize_action_state_6)
     show_debug_message("action state 6");
     initialize_action_state_6 = false;
     
+    // find the Player
     player = instance_find(obj_player_battle, 0);
     if (player)
     {
-        // if to the left of the player
+        // if to the left of the Player
         if (x < player.x)
         {
-            // face right
-            image_xscale = 1;
-            facing_right = true;
+            facing = RIGHT;
         }
         
-        // else, to the right of the player
+        // else, to the right of the Player
         else
         {
-            // face left
-            image_xscale = -1;
-            facing_right = false;
+            facing = LEFT;
         }
     }
     
@@ -49,7 +46,7 @@ else
         
         // add attack instance
         attack1 = instance_create(x, y, obj_hero_attack_5);
-        attack1.facing_right = facing_right;
+        attack1.facing = facing;
         
         // increment the attack counter
         attack_counter++;

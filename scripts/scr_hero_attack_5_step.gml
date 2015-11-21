@@ -5,64 +5,21 @@
 // is object standing on a wall
 grounded = place_meeting(x, y + 1, obj_wall);
 
-// update movement deceleration
-if (grounded)
-{
-    // add friction
-    speed_x = speed_x - (speed_x * move_friction);
-    if (speed_x < move_friction_min)
-    {
-        speed_x = 0;
-    }
-    
-    // update bounce
-    speed_y = speed_y - (speed_y * jump_bounce);
-    if (speed_y <  jump_bounce_min)
-    {
-        speed_y = 0;
-    }
-}
-
-// update movespeed
-if (facing_right)
-{
-    velocity_x = speed_x;
-}
-else
-{
-    velocity_x = -speed_x;
-}
-
 // if the timer has ended
-kill_timer += delta_time;
-if (kill_timer >= (kill_time * 1000000))
+kill_timer += TICK;
+if (kill_timer >= kill_time)
 {
     instance_create(x, bbox_bottom, obj_hero_attack_6);
     instance_destroy();
 }
 
-// if not idle
-if ( ! idling)
+// throw the object
+if (key_jump_pressed)
 {
-    // if grounded after jumping
-    if (jumping && grounded)
-    {
-        jumping = false;
-        
-        // if no longer bouncing
-        if (speed_y == 0)
-        {
-            idling = true;
-        }
-    }
-    
-    // if not jumping
-    else if ( ! jumping)
-    {
-        jumping = true;
-        grounded = false;
-        velocity_y = -speed_y;
-    }
+    grounded = false;
+    velocity_x = speed_x * facing;
+    velocity_y = -speed_y;
+    key_jump_pressed = false;
 }
 
 // update movement speeds
@@ -74,7 +31,15 @@ scr_entity_check_wall_collisions();
 // turn around if hit a wall
 if (turn_around)
 {
-    facing_right = !facing_right;
+    if (facing == RIGHT)
+    {
+        facing = LEFT;
+    }
+    else if (facing == LEFT)
+    {
+        facing = RIGHT;
+    }
+    velocity_x = last_velocity_x * facing;
 }
 
 // update object position
@@ -82,12 +47,5 @@ x += mx;
 y += my;
 
 // update object sprite
-if (facing_right)
-{
-    image_xscale = 1;
-}
-else
-{
-    image_xscale = -1;
-}
+scr_entity_update_image_xscale();
 

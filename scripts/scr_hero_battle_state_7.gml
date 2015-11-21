@@ -9,6 +9,7 @@ if (initialize_action_state_7)
     show_debug_message("attack state 7");
     initialize_action_state_7 = false;
     
+    // find the Player
     player = instance_find(obj_player_battle, 0);
     if (player)
     {
@@ -31,11 +32,11 @@ if (initialize_action_state_7)
         velocity_x = (target_x - origin_x) / duration;
         velocity_y = (target_y + 0.5 * -GRAV * duration * duration - origin_y) / duration;
         
-        // update object state
+        // update state
         jumping = true;
         grounded = false;
         
-        // update object sprite
+        // update sprite
         image_speed = 0;
         image_index = 1;
     }
@@ -54,7 +55,7 @@ else
     {
         jumping = false;
         
-        // update object sprite
+        // update sprite
         image_speed = 0;
         image_index = 0;
         
@@ -63,7 +64,7 @@ else
         velocity_y = 0;
         
         // idle for a moment
-        idle_time = 0.5;
+        idle_time = 30;
         idling = true;
         
         // change action state

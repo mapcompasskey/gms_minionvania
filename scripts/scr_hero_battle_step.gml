@@ -84,3 +84,10 @@ y += my;
 
 scr_entity_reposition();
 
+
+/**
+ * Update Object Sprite
+ */
+
+scr_entity_update_image_xscale();
+

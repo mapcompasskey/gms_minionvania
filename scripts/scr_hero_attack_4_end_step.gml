@@ -2,12 +2,14 @@
  * On End of Update
  */
 
+// update the position to match the Heros
 if (hero)
 {
     y = hero.bbox_bottom;
     
-    facing_right = hero.facing_right
-    if (facing_right)
+    // face in the same direction as the Hero
+    facing = hero.facing;
+    if (facing == RIGHT)
     {
         image_xscale = 1;
         x = hero.bbox_right + (sprite_width / 2);

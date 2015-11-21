@@ -5,8 +5,6 @@
 scr_movement_vars();
 speed_x = 8;
 speed_y = 12;
-max_velocity_x = 0;//8;
-max_velocity_y = 0;//14;
 
 walking = false;
 jumping = false;

@@ -1,3 +1,7 @@
+/**
+ * On Draw
+ */
+
 draw_self();
 
 // draw health bar over object's head

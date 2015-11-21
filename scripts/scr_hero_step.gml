@@ -1,5 +1,5 @@
 /**
- * Update
+ * On Update
  */
 
 // is object standing on a wall

@@ -6,14 +6,14 @@ if (player != noone)
 {
     y = player.bbox_bottom;
     
-    facing_right = player.facing_right
-    if (facing_right)
+    facing = player.facing;
+    if (facing == RIGHT)
     {
         image_xscale = 1;
         x = player.bbox_right;
         y = player.bbox_bottom;
     }
-    else
+    else if (facing == LEFT)
     {
         image_xscale = -1;
         x = player.bbox_left;

@@ -3,18 +3,11 @@
  */
 
 // update movespeed
-if (facing_right)
-{
-    velocity_x = speed_x;
-}
-else
-{
-    velocity_x = -speed_x;
-}
+velocity_x = speed_x * facing;
 
 // update kill timer
-kill_timer += delta_time;
-if (kill_timer > (kill_time * 1000000))
+kill_timer += TICK;
+if (kill_timer > kill_time)
 {
     instance_destroy();
 }
@@ -36,12 +29,5 @@ x += mx;
 y += my;
 
 // update object sprite
-if (facing_right)
-{
-    image_xscale = 1;
-}
-else
-{
-    image_xscale = -1;
-}
+scr_entity_update_image_xscale();
 

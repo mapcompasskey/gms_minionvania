@@ -9,10 +9,10 @@ if (surface_exists(snapshot_surface))
 }
 
 // increment the timer by the amount of microseconds since the last frame
-transition_timer += delta_time;
+transition_timer += TICK;
 
 // calcuate the width of the rectangle
-var timer_rate = (100 / (transition_time * 1000000)) * transition_timer;
+var timer_rate = (100 / transition_time) * transition_timer;
 var rectangle_width = timer_rate * view_wview[0] / 100;
 
 var x1, x2, y1, y2;
@@ -26,7 +26,7 @@ draw_set_color(c_black);
 draw_rectangle(x1, y1, x2, y2, 0);
 
 // if the timer has ended
-if (transition_timer >= (transition_time * 1000000))
+if (transition_timer >= transition_time)
 {
     // destory the surface, freeing it from memory
     if (surface_exists(snapshot_surface))

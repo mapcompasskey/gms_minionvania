@@ -16,10 +16,6 @@ if (initialize_action_state_1)
         key_left = true;
         key_right = false;
         
-        // face left
-        image_xscale = -1;
-        facing_right = false;
-        
         // get the room's "left" position
         pnt = ds_map_find_value(room_positions, "left");
         target_x = ds_map_find_value(pnt, "x");
@@ -33,10 +29,6 @@ if (initialize_action_state_1)
         key_left = false;
         key_right = true;
         
-        // face right
-        image_xscale = 1;
-        facing_right = true;
-        
         // get the rooms "right" position
         pnt = ds_map_find_value(room_positions, "right");
         target_x = ds_map_find_value(pnt, "x");
@@ -49,32 +41,38 @@ else
     // if moving left
     if (key_left)
     {
-        // move left
-        velocity_x = -speed_x;
+        facing = LEFT;
         walking = true;
+        velocity_x = speed_x;
     }
     
     // else, if moving right
     else if (key_right)
     {
-        // move right
-        velocity_x = speed_x;
+        facing = RIGHT;
         walking = true;
+        velocity_x = speed_x;
     }
     
     // if within reach of the target
     if (point_distance(target_x, target_y, x, y) < 5)
     {
-        // stop moving
-        velocity_x = 0;
-        walking = false;
-        
         // turn around
-        image_xscale = -image_xscale;
-        facing_right = !facing_right;
+        if (facing == LEFT)
+        {
+            facing = RIGHT;
+        }
+        else if (facing == RIGHT)
+        {
+            facing = LEFT;
+        }
+        
+        // stop moving
+        walking = false;
+        velocity_x = 0;
         
         // idle for a moment
-        idle_time = 0.5;
+        idle_time = 30;
         idling = true;
         
         // change action state
@@ -83,5 +81,7 @@ else
         // reset state initialization
         initialize_action_state_1 = true;
     }
+    
+    velocity_x = velocity_x * facing;
 }
 

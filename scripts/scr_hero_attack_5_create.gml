@@ -7,17 +7,15 @@
 scr_movement_vars();
 speed_x = 8;
 speed_y = 6;
+move_friction = 0.9;
+move_friction_min = 1;
+jump_bounce = 0.75;
+jump_bounce_min = 1;
 
-move_friction = 0.1;
-move_friction_min = 2;
-jump_bounce = 0.3;
-jump_bounce_min = 2;
-
-idling = false;
-jumping = false;
-
-kill_time = 2;
+kill_time = 120;
 kill_timer = 0;
+
+key_jump_pressed = true;
 
 // randomize movement speeds
 speed_x = speed_x + (speed_x * random(2));

@@ -5,10 +5,10 @@
  */
 
 player = noone;
-facing_right = true;
+facing = RIGHT;
 damage = 10;
 
-// set object sprite animation
+// set sprite animation
 image_index = 0;
 image_speed = 0.3;
 

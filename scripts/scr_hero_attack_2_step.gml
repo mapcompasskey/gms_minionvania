@@ -6,14 +6,7 @@
 grounded = place_meeting(x, y + 1, obj_wall);
 
 // update movespeed
-if (facing_right)
-{
-    velocity_x = speed_x;
-}
-else
-{
-    velocity_x = -speed_x;
-}
+velocity_x = speed_x * facing;
 
 // if not jumping
 if ( ! jumping)
@@ -46,12 +39,5 @@ x += mx;
 y += my;
 
 // update object sprite
-if (facing_right)
-{
-    image_xscale = 1;
-}
-else
-{
-    image_xscale = -1;
-}
+scr_entity_update_image_xscale();
 

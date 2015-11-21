@@ -9,18 +9,12 @@ if ( ! dying && ! hurting && ! crouching && ! jumping && ! attacking)
         if (mouse_check_button_released(mb_left))
         {
             var origin_x, origin_y, target_x, target_y, duration;
-            //var origin_x, origin_y, target_x, target_y, hypotenuse, duration;
             
             origin_x = x;
             origin_y = bbox_bottom;
             
             target_x = mouse_x;
             target_y = mouse_y;
-            
-            //hypotenuse = point_distance(origin_x, origin_y, target_x, target_y);
-            //duration = hypotenuse / room_speed * 30;
-            //if (hypotenuse < 200) duration = 30;
-            //show_debug_message(string(hypotenuse) + ", " + string(duration));
             
             duration = 60;
             
@@ -29,6 +23,12 @@ if ( ! dying && ! hurting && ! crouching && ! jumping && ! attacking)
             
             grounded = false;
             launching = true;
+            
+            facing = RIGHT;
+            if (velocity_x < 0)
+            {
+                facing = LEFT;
+            }
         }
     }
     

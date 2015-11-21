@@ -15,7 +15,7 @@ attacking = false;
 idling = false;
 recovering = false;
 
-monster_touching = -1;
+monster_colliding = noone;
 can_be_attacked = true;
 base_speed_x = speed_x;
 target_x = 0;
