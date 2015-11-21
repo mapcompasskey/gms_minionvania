@@ -2,20 +2,20 @@
  * On End of Update
  */
 
-if (hero_id)
+if (hero)
 {
-    y = hero_id.bbox_bottom;
+    y = hero.bbox_bottom;
     
-    facing_right = hero_id.facing_right
+    facing_right = hero.facing_right
     if (facing_right)
     {
         image_xscale = 1;
-        x = hero_id.bbox_right + (sprite_width / 2);
+        x = hero.bbox_right + (sprite_width / 2);
     }
     else
     {
         image_xscale = -1;
-        x = hero_id.bbox_left + (sprite_width / 2);
+        x = hero.bbox_left + (sprite_width / 2);
     }
 }
 else

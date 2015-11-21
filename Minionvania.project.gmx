@@ -93,6 +93,11 @@
           <script>scripts\scr_player_key_step.gml</script>
           <script>scripts\scr_player_key_end_step.gml</script>
         </scripts>
+        <scripts name="Monster">
+          <script>scripts\scr_monster_create.gml</script>
+          <script>scripts\scr_monster_step.gml</script>
+          <script>scripts\scr_monster_is_walking.gml</script>
+        </scripts>
         <scripts name="Hero">
           <script>scripts\scr_hero_create.gml</script>
           <script>scripts\scr_hero_step.gml</script>
@@ -132,11 +137,6 @@
             <script>scripts\scr_hero_attack_6_create.gml</script>
             <script>scripts\scr_hero_attack_6_step.gml</script>
           </scripts>
-        </scripts>
-        <scripts name="Monster">
-          <script>scripts\scr_monster_create.gml</script>
-          <script>scripts\scr_monster_step.gml</script>
-          <script>scripts\scr_monster_is_walking.gml</script>
         </scripts>
         <script>scripts\scr_movement_vars.gml</script>
         <script>scripts\scr_movement_update.gml</script>

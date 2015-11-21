@@ -15,8 +15,6 @@ attacking = false;
 idling = false;
 recovering = false;
 
-grounded = false;
-facing_right = true;
 monster_touching = -1;
 can_be_attacked = true;
 base_speed_x = speed_x;

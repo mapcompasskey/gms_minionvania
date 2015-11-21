@@ -11,8 +11,6 @@ idling = false;
 jumping = false;
 recovering = false;
 
-grounded = false;
-facing_right = true;
 target_x = 0;
 target_y = 0;
 velocity_x = 0;

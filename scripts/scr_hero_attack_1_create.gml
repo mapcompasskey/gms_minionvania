@@ -1,5 +1,7 @@
 /**
  * Initialize Variables
+ *
+ * The Hero attacks with a wave that moves across the screen.
  */
 
 scr_movement_vars();

@@ -86,7 +86,7 @@ else
         
         // add attack instance
         attack1 = instance_create(x, y, obj_hero_attack_4);
-        attack1.hero_id = id;
+        attack1.hero = id;
         
         // idle for a moment
         idle_time = 50;

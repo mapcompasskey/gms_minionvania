@@ -1,5 +1,7 @@
 /**
  * Initialize Variables
+ *
+ * A bomb that is thrown by the Hero and bounces around for a bit then explodes (hero_attack_6).
  */
 
 scr_movement_vars();
@@ -13,9 +15,6 @@ jump_bounce_min = 2;
 
 idling = false;
 jumping = false;
-
-grounded = false;
-facing_right = true;
 
 kill_time = 2;
 kill_timer = 0;

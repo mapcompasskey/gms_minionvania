@@ -17,8 +17,6 @@ recovering = false;
 dying = false;
 attacking = false;
 
-grounded = false;
-facing_right = true;
 recover_time = 60;
 recover_timer = 0;
 knockback_speed_x = 8;
