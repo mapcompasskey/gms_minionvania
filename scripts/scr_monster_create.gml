@@ -12,8 +12,6 @@ dying = false;
 attacking = false;
 
 damage = 30;
-grounded = false;
-facing_right = true;
 
 // faux object inputs
 key_left = false;

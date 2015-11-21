@@ -101,7 +101,7 @@
     <instance objName="obj_wall" x="416" y="480" name="inst_C3C803AB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="448" y="480" name="inst_EE778AA7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="480" y="480" name="inst_1E5AEABE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_hero" x="192" y="832" name="inst_09CD4168" locked="0" code="key_right = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hero" x="1024" y="832" name="inst_09CD4168" locked="0" code="key_left = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1152" y="672" name="inst_36FB05A4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="32" y="832" name="inst_8725387F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="32" y="800" name="inst_29EBDCA7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -252,7 +252,7 @@
     <instance objName="obj_monster" x="992" y="640" name="inst_00A0B4A0" locked="0" code="damage = 10;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_monster" x="768" y="352" name="inst_6FAAB5EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="544" y="832" name="inst_1A6520FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_health_pack" x="704" y="192" name="inst_DC0DDF65" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_health_pack" x="288" y="224" name="inst_DC0DDF65" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_health_pack" x="416" y="704" name="inst_E3971E2E" locked="0" code="hp = 50;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor_trap" x="736" y="608" name="inst_B7C619C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor_trap" x="672" y="224" name="inst_42FD1232" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -266,10 +266,8 @@
     <instance objName="obj_wall" x="832" y="896" name="inst_B51827F5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hero_trigger" x="736" y="800" name="inst_1DDE3A3F" locked="0" code="if_moving_right = true;&#xA;speed_x = 4;&#xA;speed_y = 9;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hero_trigger" x="800" y="800" name="inst_52A2A75E" locked="0" code="if_moving_left = true;&#xA;speed_x = 4;&#xA;speed_y = 9;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player_key" x="1056" y="832" name="inst_ED2EF570" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player_key" x="1120" y="832" name="inst_73D812EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player_keyhole" x="960" y="832" name="inst_1A1FE90A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player_keyhole" x="864" y="832" name="inst_CDBD9D30" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player_key" x="1088" y="832" name="inst_ED2EF570" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player_key" x="1152" y="416" name="inst_73D812EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

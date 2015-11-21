@@ -33,6 +33,12 @@ if (PLAYER_ITEM != noone)
                 }
             }
             
+            // if this keyhole has an owner
+            if (owner != noone)
+            {
+                owner.active = true;
+            }
+            
             // destroy this object
             instance_destroy();
         }

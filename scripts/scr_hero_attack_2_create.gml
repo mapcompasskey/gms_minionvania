@@ -8,6 +8,3 @@ speed_y = 12;
 
 jumping = false;
 
-grounded = false;
-facing_right = true;
-
