@@ -19,7 +19,7 @@ launching = false;
 
 jumps = 0;
 jumpsmax = 2;
-hero_touching = -1;
+hero_colliding = noone;
 on_attack_cooldown = false;
 attack_cooldown_time = 240;
 attack_cooldown_timer = 0;

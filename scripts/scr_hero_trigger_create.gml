@@ -2,7 +2,7 @@
  * Initialize Variables
  */
 
-hero_touching = -1;
+hero_colliding = noone;
 
 if_moving_left = false;
 if_moving_right = false;

@@ -7,9 +7,9 @@ hero = instance_place(x, y, obj_hero);
 if (hero)
 {
     // if not already colliding with the Hero
-    if (hero != hero_touching)
+    if (hero != hero_colliding)
     {
-        hero_touching = hero;
+        hero_colliding = hero;
         
         if (HERO_HEALTH < hero.max_health)
         {
@@ -24,5 +24,5 @@ if (hero)
         }
     }
 }
-hero_touching = hero;
+hero_colliding = hero;
 

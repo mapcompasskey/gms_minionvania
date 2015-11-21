@@ -1,8 +1,10 @@
 /**
  * Initialize Variables
+ *
+ * The Player's melee attack.
  */
 
-player_id = false;
+player = noone;
 facing_right = true;
 damage = 10;
 

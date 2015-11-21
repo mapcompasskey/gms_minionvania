@@ -30,7 +30,7 @@ if ( ! dying && ! hurting && ! launching)
             if (hero.can_be_attacked)
             {
                 // if not previously colliding with object
-                if (hero != hero_touching)
+                if (hero != hero_colliding)
                 {
                     on_attack_cooldown = true;
                     
@@ -39,7 +39,7 @@ if ( ! dying && ! hurting && ! launching)
                 }
             }
         }
-        hero_touching = hero;
+        hero_colliding = hero;
     }
 }
 

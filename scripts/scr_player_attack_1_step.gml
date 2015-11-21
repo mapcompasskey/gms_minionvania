@@ -5,9 +5,9 @@
 // if reached the end of the sprite's animation
 if (image_index >= (image_number - 1))
 {
-    if (player_id)
+    if (player != noone)
     {
-        player_id.can_attack = true;
+        player.can_attack = true;
     }
     
     image_speed = 0;

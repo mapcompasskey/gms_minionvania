@@ -12,9 +12,9 @@ if (hero)
     }
     
     // if not already colliding with the Hero
-    if (hero != hero_touching)
+    if (hero != hero_colliding)
     {
-        hero_touching = hero;
+        hero_colliding = hero;
         
         // if trigger only affects left moving objects
         if (if_moving_left)
@@ -79,7 +79,7 @@ if (hero)
         
     }
 }
-hero_touching = hero;
+hero_colliding = hero;
 
 // update sprite
 if (if_moving_right && reset_speed_x)

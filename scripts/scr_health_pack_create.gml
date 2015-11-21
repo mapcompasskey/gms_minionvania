@@ -3,5 +3,5 @@
  */
 
 hp = 30;
-hero_touching = -1;
+hero_colliding = noone;
 
