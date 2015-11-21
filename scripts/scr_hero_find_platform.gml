@@ -21,20 +21,14 @@
 // if reached the edge of a platform
 if (turn_around && ! jumping)
 {
-    var dir, horz, vert, pos_x, pos_y, origin_x, origin_y, duration;
+    var horz, vert, pos_x, pos_y, origin_x, origin_y, duration;
     
     jump_to_target = false;
-    
-    dir = -1;
-    if (facing_right)
-    {
-        dir = 1;
-    }
     
     // iterate through an area infront of the object
     for (horz = 2; horz < 7; horz++)
     {
-        pos_x = x + (horz * dir * TILE_SIZE);
+        pos_x = x + (horz * facing * TILE_SIZE);
         for (vert = 2; vert > -7; vert--)
         {
             //show_debug_message("h: " + string(horz) + ", v: " + string(vert));
@@ -50,9 +44,9 @@ if (turn_around && ! jumping)
                     if (vert < 0)
                     {
                         // if there are two free spaces infront of the wall
-                        if ( place_free(pos_x + (TILE_SIZE * sign(dir) * -1), pos_y + 1) )
+                        if ( place_free(pos_x + (TILE_SIZE * sign(facing) * -1), pos_y + 1) )
                         {
-                            if ( place_free(pos_x + (TILE_SIZE * sign(dir) * -2), pos_y + 1) )
+                            if ( place_free(pos_x + (TILE_SIZE * sign(facing) * -2), pos_y + 1) )
                             {
                                 origin_x = x;
                                 origin_y = bbox_bottom;

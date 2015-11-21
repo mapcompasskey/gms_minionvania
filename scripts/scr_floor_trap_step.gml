@@ -11,12 +11,12 @@ if (active)
     {
         var triggered = false;
         
-        if (hero.facing_right && hero.x > (x + sprite_width / 2))
+        if (hero.facing == RIGHT && hero.x > (x + sprite_width / 2))
         {
             triggered = true;
         }
         
-        else if ( ! hero.facing_right && hero.x < (x + sprite_width / 2))
+        else if (hero.facing == LEFT && hero.x < (x + sprite_width / 2))
         {
             triggered = true;
         }

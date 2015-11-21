@@ -47,10 +47,18 @@ if (player_carrying == noone && ! idling)
     // check for collisions
     scr_entity_check_wall_collisions();
     
+    // turn around if hit a wall
     if (turn_around)
     {
-        facing_right = !facing_right;
-        velocity_x = last_velocity_x * -1;
+        if (facing == RIGHT)
+        {
+            facing = LEFT;
+        }
+        else if (facing == LEFT)
+        {
+            facing = RIGHT;
+        }
+        velocity_x = last_velocity_x * facing;
     }
     
     // update object position

@@ -13,11 +13,11 @@ if ( ! recovering)
         HERO_HEALTH -= 30;
         
         // apply knockback
-        if (facing_right)
+        if (facing == RIGHT)
         {
             velocity_x = -4;
         }
-        else
+        else if (facing == LEFT)
         {
             velocity_x = 4;
         }

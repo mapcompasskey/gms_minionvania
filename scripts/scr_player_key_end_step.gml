@@ -12,17 +12,13 @@ if (player_carrying != noone)
     if (key_action)
     {
         // point in the same direction as the Player
-        facing_right = player_carrying.facing_right;
+        facing = player_carrying.facing;
         
         // reposition the object so its not in a ceiling
         y = player_carrying.bbox_bottom - TILE_SIZE;
         
         // throw the object
-        velocity_x = -speed_x;
-        if (facing_right)
-        {
-            velocity_x = speed_x;
-        }
+        velocity_x = speed_x * facing;
         velocity_y = -speed_y;
         grounded = false;
         
