@@ -12,10 +12,15 @@ falling = false;
 hurting = false;
 dying = false;
 attacking = false;
+fleeing = false;
 
 damage = 30;
 can_be_triggered = false;
+flee_speed_x = 4;
 base_speed_x = speed_x;
+
+flee_time = 240;
+flee_timer = 0;
 
 // faux object inputs
 key_left = false;

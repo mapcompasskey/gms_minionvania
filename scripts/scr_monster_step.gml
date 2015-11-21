@@ -12,6 +12,7 @@ grounded = place_meeting(x, y + 1, obj_wall);
 
 scr_monster_is_jumping();
 scr_monster_is_walking();
+scr_monster_is_fleeing();
 
 
 /**

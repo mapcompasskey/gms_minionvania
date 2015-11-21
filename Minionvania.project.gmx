@@ -105,6 +105,7 @@
           <script>scripts\scr_monster_step.gml</script>
           <script>scripts\scr_monster_is_jumping.gml</script>
           <script>scripts\scr_monster_is_walking.gml</script>
+          <script>scripts\scr_monster_is_fleeing.gml</script>
         </scripts>
         <scripts name="Hero">
           <script>scripts\scr_hero_create.gml</script>
