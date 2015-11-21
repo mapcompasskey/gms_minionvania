@@ -32,6 +32,7 @@
       <sprite>sprites\spr_floor_trap</sprite>
       <sprite>sprites\spr_spikes</sprite>
       <sprite>sprites\spr_hero_trigger</sprite>
+      <sprite>sprites\spr_entity_trigger</sprite>
       <sprite>sprites\spr_health_pack</sprite>
       <sprite>sprites\spr_player_keyhole</sprite>
     </sprites>
@@ -96,6 +97,7 @@
         <scripts name="Monster">
           <script>scripts\scr_monster_create.gml</script>
           <script>scripts\scr_monster_step.gml</script>
+          <script>scripts\scr_monster_is_jumping.gml</script>
           <script>scripts\scr_monster_is_walking.gml</script>
         </scripts>
         <scripts name="Hero">
@@ -105,8 +107,8 @@
           <script>scripts\scr_hero_is_idling.gml</script>
           <script>scripts\scr_hero_is_attacking.gml</script>
           <script>scripts\scr_hero_is_jumping.gml</script>
-          <script>scripts\scr_hero_find_platform.gml</script>
           <script>scripts\scr_hero_is_walking.gml</script>
+          <script>scripts\scr_hero_find_platform.gml</script>
           <script>scripts\scr_hero_draw.gml</script>
         </scripts>
         <scripts name="HeroBattle">
@@ -149,6 +151,11 @@
         <scripts name="HeroTrigger">
           <script>scripts\scr_hero_trigger_create.gml</script>
           <script>scripts\scr_hero_trigger_step.gml</script>
+        </scripts>
+        <scripts name="EntityTrigger">
+          <script>scripts\scr_entity_trigger_create.gml</script>
+          <script>scripts\scr_entity_trigger_step.gml</script>
+          <script>scripts\scr_entity_trigger_update.gml</script>
         </scripts>
         <scripts name="HealthPack">
           <script>scripts\scr_health_pack_create.gml</script>
@@ -202,6 +209,7 @@
     <objects name="Misc">
       <object>objects\obj_wall</object>
       <object>objects\obj_hero_trigger</object>
+      <object>objects\obj_entity_trigger</object>
       <object>objects\obj_health_pack</object>
       <object>objects\obj_floor_trap</object>
       <object>objects\obj_spikes</object>
@@ -216,6 +224,7 @@
     <room>rooms\rm_menu</room>
     <room>rooms\rm_level_3a</room>
     <room>rooms\rm_level_3b</room>
+    <room>rooms\rm_level_3c</room>
     <room>rooms\rm_level_4</room>
   </rooms>
   <help>

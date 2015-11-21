@@ -5,15 +5,12 @@
 // is object standing on a wall
 grounded = place_meeting(x, y + 1, obj_wall);
 
-// reset walking
-velocity_x = 0;
-walking = false;
-
 
 /**
  * Check Object State
  */
 
+scr_monster_is_jumping();
 scr_monster_is_walking();
 
 
@@ -31,7 +28,7 @@ scr_movement_update();
 scr_entity_check_platform_edges();
 
 // turn around if reached edge of platform
-if (turn_around)
+if ( ! can_be_triggered && turn_around)
 {
     key_left  = !key_left;
     key_right = !key_right;
@@ -58,6 +55,11 @@ if (turn_around)
 
 x += mx;
 y += my;
+
+
+/**
+ * Update Object Sprite
+ */
 
 scr_entity_update_image_xscale();
 
