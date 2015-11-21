@@ -14,6 +14,7 @@
       <sprite>sprites\spr_player</sprite>
       <sprite>sprites\spr_player_battle</sprite>
       <sprite>sprites\spr_player_attack_1</sprite>
+      <sprite>sprites\spr_player_fart</sprite>
       <sprite>sprites\spr_player_key</sprite>
       <sprite>sprites\spr_monster</sprite>
       <sprite>sprites\spr_hero</sprite>
@@ -69,11 +70,21 @@
           <script>scripts\scr_player_create.gml</script>
           <script>scripts\scr_player_step.gml</script>
           <script>scripts\scr_player_is_attacking.gml</script>
+          <script>scripts\scr_player_is_farting.gml</script>
           <script>scripts\scr_player_is_crouching.gml</script>
           <script>scripts\scr_player_is_jumping.gml</script>
           <script>scripts\scr_player_is_walking.gml</script>
           <script>scripts\scr_player_is_launching.gml</script>
           <script>scripts\scr_player_end_step.gml</script>
+        </scripts>
+        <scripts name="PlayerKey">
+          <script>scripts\scr_player_key_create.gml</script>
+          <script>scripts\scr_player_key_step.gml</script>
+          <script>scripts\scr_player_key_end_step.gml</script>
+        </scripts>
+        <scripts name="PlayerFart">
+          <script>scripts\scr_player_fart_create.gml</script>
+          <script>scripts\scr_player_fart_step.gml</script>
         </scripts>
         <scripts name="PlayerBattle">
           <script>scripts\scr_player_battle_create.gml</script>
@@ -88,11 +99,6 @@
             <script>scripts\scr_player_attack_1_step.gml</script>
             <script>scripts\scr_player_attack_1_end_step.gml</script>
           </scripts>
-        </scripts>
-        <scripts name="PlayerKey">
-          <script>scripts\scr_player_key_create.gml</script>
-          <script>scripts\scr_player_key_step.gml</script>
-          <script>scripts\scr_player_key_end_step.gml</script>
         </scripts>
         <scripts name="Monster">
           <script>scripts\scr_monster_create.gml</script>
@@ -194,6 +200,7 @@
       <object>objects\obj_player</object>
       <object>objects\obj_player_attack</object>
       <object>objects\obj_player_attack_1</object>
+      <object>objects\obj_player_fart</object>
       <object>objects\obj_player_battle</object>
       <object>objects\obj_player_key</object>
       <object>objects\obj_monster</object>
