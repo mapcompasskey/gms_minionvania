@@ -14,6 +14,12 @@ scr_monster_is_jumping();
 scr_monster_is_walking();
 scr_monster_is_fleeing();
 
+if (attacking)
+{
+    walking = false;
+    velocity_x = 0;
+}
+
 
 /**
  * Update Movement Speeds

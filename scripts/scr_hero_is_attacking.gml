@@ -11,33 +11,37 @@ if ( ! dying && ! hurting && ! idling && ! hurting)
         monster = instance_place(x, y, obj_monster);
         if (monster)
         {
-            // if not previously colliding with object
-            if (monster != monster_colliding)
+            // if monster is grounded
+            if (monster.grounded)
             {
-                // stop moving
-                walking = false;
-                velocity_x = 0;
-                
-                // get current amount of health
-                current_hp = HERO_HEALTH;
-                
-                // amount of damage to take
-                damage_taken = 30;
-                if (is_real(monster.damage))
+                // if not previously colliding with object
+                if (monster != monster_colliding)
                 {
-                    damage_taken = monster.damage;
+                    // stop moving
+                    walking = false;
+                    velocity_x = 0;
+                    
+                    // get current amount of health
+                    current_hp = HERO_HEALTH;
+                    
+                    // amount of damage to take
+                    damage_taken = 30;
+                    if (is_real(monster.damage))
+                    {
+                        damage_taken = monster.damage;
+                    }
+                    
+                    // update state
+                    attacking = true;
+                    monster.attacking = true;
+                    
+                    // update sprite alpha
+                    image_alpha = 0.25;
+                    monster.image_alpha = 0.25;
+                    
+                    // can't be attacked by player
+                    can_be_attacked = false;
                 }
-                
-                // update state
-                attacking = true;
-                monster.attacking = true;
-                
-                // update sprite alpha
-                image_alpha = 0.25;
-                monster.image_alpha = 0.25;
-                
-                // can't be attacked by player
-                can_be_attacked = false;
             }
         }
         monster_colliding = monster;
